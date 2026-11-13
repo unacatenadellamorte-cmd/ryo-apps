@@ -22,9 +22,9 @@
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-<link rel="stylesheet" href="../../assets/css/site.css?v=20261113-design">
-<script src="../../site-config.js?v=20261113-design" defer></script>
-<script src="../../assets/js/site.js?v=20261113-design" defer></script>
+<link rel="stylesheet" href="../../assets/css/site.css?v=20261113-detail">
+<script src="../../site-config.js?v=20261113-detail" defer></script>
+<script src="../../assets/js/site.js?v=20261113-detail" defer></script>
 </head>
 <body class="page-app" style="--app:#1f5a43;--app-tint:#e6efe9">
 <a class="skip" href="#main">本文へ移動</a>
@@ -74,42 +74,71 @@
     </div>
   </section>
 
-  <section class="section features" aria-labelledby="features-title">
+  <nav class="toc" aria-label="このページの内容" data-edit-id="monoa-toc">
+    <div class="wrap toc-in">
+      <p class="toc-label" aria-hidden="true">このページ</p>
+      <ul class="toc-list"><li><a href="#scenes" data-edit-id="monoa-toc-scenes">用途</a></li><li><a href="#features" data-edit-id="monoa-toc-features">機能を詳しく</a></li><li><a href="#steps" data-edit-id="monoa-toc-steps">使い方</a></li><li><a href="#gallery" data-edit-id="monoa-toc-gallery">画面</a></li><li><a href="#video" data-edit-id="monoa-toc-video">紹介動画</a></li><li><a href="#faq" data-edit-id="monoa-toc-faq">よくある質問</a></li><li><a href="#dist" data-edit-id="monoa-toc-dist">配布</a></li></ul>
+    </div>
+  </nav>
+
+  <section class="section scenes" id="scenes" aria-labelledby="scenes-title" data-edit-id="monoa-scenes">
     <div class="wrap">
       <header class="section-head">
-        <h2 id="features-title" class="section-title">できること</h2>
-        
+        <h2 id="scenes-title" class="section-title">こんな時に</h2>
+
       </header>
-      <ul class="feature-list"><li class="feature" data-edit-id="monoa-feature-1"><h3>声で記録</h3><p>マイクを押して話すと、日付・金額・内容を分けて入力欄へ。保存前に確認・修正できます。</p></li><li class="feature" data-edit-id="monoa-feature-2"><h3>ホーム画面から</h3><p>ウィジェットから音声入力やクイック入力をすぐに開けます。</p></li><li class="feature" data-edit-id="monoa-feature-3"><h3>月の使い方を円グラフで</h3><p>カテゴリ別の支出を円グラフで表示。月ごとの収支もひと目で分かります。</p></li><li class="feature" data-edit-id="monoa-feature-4"><h3>一年の流れと繰越残高</h3><p>12か月の収支と、前月からの繰越を含めた残高をグラフで確認できます。</p></li><li class="feature" data-edit-id="monoa-feature-5"><h3>カレンダーと検索</h3><p>日ごとの記録をカレンダーで一覧。期間・カテゴリ・タグ・支払い方法で探せます。</p></li><li class="feature" data-edit-id="monoa-feature-6"><h3>自分らしい見た目</h3><p>背景写真やテーマ、配色を選べます。</p></li></ul>
+      <ol class="scene-list"><li class="scene" data-edit-id="monoa-scene-1"><p class="scene-num" aria-hidden="true">01</p><h3 class="scene-title">買い物の帰り道に</h3><p class="scene-text">レシートをしまう前に、ホーム画面のウィジェットからマイクを開いて「スーパーで2,800円」と話します。入力欄を確かめて保存すれば、その場で記録が終わります。</p></li><li class="scene" data-edit-id="monoa-scene-2"><p class="scene-num" aria-hidden="true">02</p><h3 class="scene-title">月末に、何に使ったか知りたいとき</h3><p class="scene-text">カテゴリ別の円グラフで今月の使い方を確かめ、気になった日はカレンダーで日ごとの記録をたどります。</p></li><li class="scene" data-edit-id="monoa-scene-3"><p class="scene-num" aria-hidden="true">03</p><h3 class="scene-title">あの支払いがいつだったか探すとき</h3><p class="scene-text">期間・カテゴリ・タグ・支払い方法を組み合わせて検索し、見つけた記録を開いて確かめます。</p></li></ol>
     </div>
   </section>
 
-  <section class="section steps" aria-labelledby="steps-title">
+  <section class="section features" id="features" aria-labelledby="features-title">
     <div class="wrap">
       <header class="section-head">
-        <h2 id="steps-title" class="section-title">3ステップで使い方</h2>
+        <h2 id="features-title" class="section-title">機能を詳しく</h2>
+
       </header>
-      <ol class="step-list">
-        <li class="step" data-edit-id="monoa-step-1">
-          <p class="step-num" aria-hidden="true">1</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>話す</h3><p>買い物のあと、アプリやホーム画面のウィジェットからマイクを押して、「スーパーで2,800円」のように話します。</p></div>
-          <img src="../../assets/media/monoa/screen-widgets.webp" alt="ホーム画面のウィジェット。音声入力とクイック入力を開けます。" width="640" height="1391" loading="lazy" decoding="async" class="phone step-img">
-        </li>
-        <li class="step" data-edit-id="monoa-step-2">
-          <p class="step-num" aria-hidden="true">2</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>確かめて保存</h3><p>日付・金額・内容が入力欄に入ります。必要なら直して保存します。</p></div>
-          <img src="../../assets/media/monoa/screen-voice.webp" alt="音声入力の画面。話した内容を確認してから保存します。" width="640" height="1391" loading="lazy" decoding="async" class="phone step-img">
-        </li>
-        <li class="step" data-edit-id="monoa-step-3">
-          <p class="step-num" aria-hidden="true">3</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>振り返る</h3><p>円グラフやカレンダーで、月の使い方を確認します。</p></div>
-          <img src="../../assets/media/monoa/screen-circle.webp" alt="月のカテゴリ別支出を円グラフで表示する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone step-img">
-        </li>
+      <div class="story-list">
+      <article class="story" id="feature-voice" aria-labelledby="story-voice-title" data-edit-id="monoa-story-voice">
+        <div class="story-text">
+          <p class="eyebrow story-eyebrow">声で記録</p>
+          <h3 id="story-voice-title" class="story-title" data-edit-id="monoa-story-voice-title">話した内容は、確かめてから保存。</h3>
+          <p class="story-body">マイクを押して話すと、日付・金額・内容を分けて入力欄へ入れます。話した瞬間に保存されるのではなく、入力欄を見て、必要なら直してから保存する流れです。</p>
+          <p class="story-points-label">操作のポイント</p>
+          <ul class="story-points"><li>アプリ内のマイクのほか、ホーム画面のウィジェットから音声入力やクイック入力を開けます</li><li>入力欄に入った日付・金額・内容は、保存前に手で直せます</li><li>声を出しにくい場所では、手入力でも記録できます</li></ul>
+          <p class="story-note">聞き取りの結果は、話し方やまわりの音によって変わることがあります。保存前に内容をご確認ください。</p>
+        </div>
+        <div class="story-media story-media-2"><figure class="story-shot"><img src="../../assets/media/monoa/screen-voice.webp" alt="音声入力の画面。話した内容を確認してから保存します。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>音声入力の画面。話した内容を確認してから保存します。</figcaption></figure><figure class="story-shot"><img src="../../assets/media/monoa/screen-widgets.webp" alt="ホーム画面のウィジェット。音声入力とクイック入力を開けます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>ホーム画面のウィジェット。音声入力とクイック入力を開けます。</figcaption></figure></div>
+      </article>
+      <article class="story story-rev" id="feature-lookback" aria-labelledby="story-lookback-title" data-edit-id="monoa-story-lookback">
+        <div class="story-text">
+          <p class="eyebrow story-eyebrow">探す・振り返る</p>
+          <h3 id="story-lookback-title" class="story-title" data-edit-id="monoa-story-lookback-title">あとから探せて、月の使い方もひと目で。</h3>
+          <p class="story-body">記録には、カテゴリと支払い方法に加えて、1件につき10個までタグを付けられます。探すときは条件を組み合わせて絞り込み、月の使い方はカテゴリ別の円グラフで確かめます。</p>
+          <p class="story-points-label">操作のポイント</p>
+          <ul class="story-points"><li>期間・カテゴリ・タグ・支払い方法で記録を検索</li><li>カテゴリと支払い方法は、追加や名前の変更ができます</li><li>月はカテゴリ別の円グラフ、一年は12か月の収支と繰越残高の棒グラフで確認</li></ul>
+
+        </div>
+        <div class="story-media story-media-2"><figure class="story-shot"><img src="../../assets/media/monoa/screen-search.webp" alt="期間・カテゴリ・タグ・支払い方法で記録を検索する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>期間・カテゴリ・タグ・支払い方法で記録を検索する画面。</figcaption></figure><figure class="story-shot"><img src="../../assets/media/monoa/screen-circle.webp" alt="月のカテゴリ別支出を円グラフで表示する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>月のカテゴリ別支出を円グラフで表示する画面。</figcaption></figure></div>
+      </article>
+      </div>
+      <div class="feature-all" data-edit-id="monoa-feature-all">
+        <h3 class="feature-all-title">機能の一覧</h3>
+        <ul class="feature-list"><li class="feature" data-edit-id="monoa-feature-1"><h4>声で記録</h4><p>マイクを押して話すと、日付・金額・内容を分けて入力欄へ。保存前に確認・修正できます。</p></li><li class="feature" data-edit-id="monoa-feature-2"><h4>ホーム画面から</h4><p>ウィジェットから音声入力やクイック入力をすぐに開けます。</p></li><li class="feature" data-edit-id="monoa-feature-3"><h4>月の使い方を円グラフで</h4><p>カテゴリ別の支出を円グラフで表示。月ごとの収支もひと目で分かります。</p></li><li class="feature" data-edit-id="monoa-feature-4"><h4>一年の流れと繰越残高</h4><p>12か月の収支と、前月からの繰越を含めた残高をグラフで確認できます。</p></li><li class="feature" data-edit-id="monoa-feature-5"><h4>カレンダーと検索</h4><p>日ごとの記録をカレンダーで一覧。期間・カテゴリ・タグ・支払い方法で探せます。</p></li><li class="feature" data-edit-id="monoa-feature-6"><h4>自分らしい見た目</h4><p>背景写真やテーマ、配色を選べます。</p></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section steps" id="steps" aria-labelledby="steps-title">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 id="steps-title" class="section-title">3ステップで分かる使い方</h2>
+      </header>
+      <ol class="step-list"><li class="step" data-edit-id="monoa-step-1"><p class="step-num" aria-hidden="true">1</p><div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>話す</h3><p>買い物のあと、アプリやホーム画面のウィジェットからマイクを押して、「スーパーで2,800円」のように話します。</p></div></li><li class="step" data-edit-id="monoa-step-2"><p class="step-num" aria-hidden="true">2</p><div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>確かめて保存</h3><p>日付・金額・内容が入力欄に入ります。必要なら直して保存します。</p></div></li><li class="step" data-edit-id="monoa-step-3"><p class="step-num" aria-hidden="true">3</p><div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>振り返る</h3><p>円グラフやカレンダーで、月の使い方を確認します。</p></div></li>
       </ol>
     </div>
   </section>
 
-  <section class="section gallery" aria-labelledby="gallery-title">
+  <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
     <div class="wrap">
       <header class="section-head">
         <h2 id="gallery-title" class="section-title">実際の画面</h2>
@@ -117,7 +146,7 @@
       </header>
     </div>
     <div class="shots-scroller" tabindex="0" role="region" aria-label="MonoA の画面一覧（横にスクロールできます）">
-      <ul class="shots"><li class="shot" data-edit-id="monoa-shot-screen-voice"><figure><img src="../../assets/media/monoa/screen-voice.webp" alt="音声入力の画面。話した内容を確認してから保存します。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>音声入力の画面。話した内容を確認してから保存します。</figcaption></figure></li><li class="shot" data-edit-id="monoa-shot-screen-widgets"><figure><img src="../../assets/media/monoa/screen-widgets.webp" alt="ホーム画面のウィジェット。音声入力とクイック入力を開けます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>ホーム画面のウィジェット。音声入力とクイック入力を開けます。</figcaption></figure></li><li class="shot" data-edit-id="monoa-shot-screen-search"><figure><img src="../../assets/media/monoa/screen-search.webp" alt="期間・カテゴリ・タグ・支払い方法で記録を検索する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>期間・カテゴリ・タグ・支払い方法で記録を検索する画面。</figcaption></figure></li><li class="shot" data-edit-id="monoa-shot-screen-circle"><figure><img src="../../assets/media/monoa/screen-circle.webp" alt="月のカテゴリ別支出を円グラフで表示する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>月のカテゴリ別支出を円グラフで表示する画面。</figcaption></figure></li><li class="shot" data-edit-id="monoa-shot-screen-balance"><figure><img src="../../assets/media/monoa/screen-balance.webp" alt="一年の収支と繰越残高を棒グラフで表示する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>一年の収支と繰越残高を棒グラフで表示する画面。</figcaption></figure></li><li class="shot" data-edit-id="monoa-shot-screen-calendar"><figure><img src="../../assets/media/monoa/screen-calendar.webp" alt="日ごとの支出・収入をカレンダーで一覧する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>日ごとの支出・収入をカレンダーで一覧する画面。</figcaption></figure></li><li class="shot" data-edit-id="monoa-shot-screen-settings"><figure><img src="../../assets/media/monoa/screen-settings.webp" alt="テーマ・配色・背景写真を選ぶ設定画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>テーマ・配色・背景写真を選ぶ設定画面。</figcaption></figure></li></ul>
+      <ul class="shots"><li class="shot" data-edit-id="monoa-shot-screen-voice"><figure><img src="../../assets/media/monoa/screen-voice.webp" alt="音声入力の画面。話した内容を確認してから保存します。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>音声入力の画面。話した内容を確認してから保存します。</figcaption></figure><a class="shot-open" href="../../assets/media/monoa/screen-voice.webp" target="_blank" rel="noopener noreferrer" data-edit-id="monoa-shot-screen-voice-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（音声入力の画面。話した内容を確認してから保存します。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="monoa-shot-screen-widgets"><figure><img src="../../assets/media/monoa/screen-widgets.webp" alt="ホーム画面のウィジェット。音声入力とクイック入力を開けます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>ホーム画面のウィジェット。音声入力とクイック入力を開けます。</figcaption></figure><a class="shot-open" href="../../assets/media/monoa/screen-widgets.webp" target="_blank" rel="noopener noreferrer" data-edit-id="monoa-shot-screen-widgets-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（ホーム画面のウィジェット。音声入力とクイック入力を開けます。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="monoa-shot-screen-search"><figure><img src="../../assets/media/monoa/screen-search.webp" alt="期間・カテゴリ・タグ・支払い方法で記録を検索する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>期間・カテゴリ・タグ・支払い方法で記録を検索する画面。</figcaption></figure><a class="shot-open" href="../../assets/media/monoa/screen-search.webp" target="_blank" rel="noopener noreferrer" data-edit-id="monoa-shot-screen-search-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（期間・カテゴリ・タグ・支払い方法で記録を検索する画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="monoa-shot-screen-circle"><figure><img src="../../assets/media/monoa/screen-circle.webp" alt="月のカテゴリ別支出を円グラフで表示する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>月のカテゴリ別支出を円グラフで表示する画面。</figcaption></figure><a class="shot-open" href="../../assets/media/monoa/screen-circle.webp" target="_blank" rel="noopener noreferrer" data-edit-id="monoa-shot-screen-circle-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（月のカテゴリ別支出を円グラフで表示する画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="monoa-shot-screen-balance"><figure><img src="../../assets/media/monoa/screen-balance.webp" alt="一年の収支と繰越残高を棒グラフで表示する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>一年の収支と繰越残高を棒グラフで表示する画面。</figcaption></figure><a class="shot-open" href="../../assets/media/monoa/screen-balance.webp" target="_blank" rel="noopener noreferrer" data-edit-id="monoa-shot-screen-balance-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（一年の収支と繰越残高を棒グラフで表示する画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="monoa-shot-screen-calendar"><figure><img src="../../assets/media/monoa/screen-calendar.webp" alt="日ごとの支出・収入をカレンダーで一覧する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>日ごとの支出・収入をカレンダーで一覧する画面。</figcaption></figure><a class="shot-open" href="../../assets/media/monoa/screen-calendar.webp" target="_blank" rel="noopener noreferrer" data-edit-id="monoa-shot-screen-calendar-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（日ごとの支出・収入をカレンダーで一覧する画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="monoa-shot-screen-settings"><figure><img src="../../assets/media/monoa/screen-settings.webp" alt="テーマ・配色・背景写真を選ぶ設定画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>テーマ・配色・背景写真を選ぶ設定画面。</figcaption></figure><a class="shot-open" href="../../assets/media/monoa/screen-settings.webp" target="_blank" rel="noopener noreferrer" data-edit-id="monoa-shot-screen-settings-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（テーマ・配色・背景写真を選ぶ設定画面。、新しいタブで開きます）</span></a></li></ul>
     </div>
     <p class="wrap shots-hint" aria-hidden="true">横にスクロールして、ほかの画面も見られます。</p>
   </section>
@@ -144,7 +173,17 @@
     </div>
   </section>
 
-  <section class="section dist" aria-labelledby="dist-title">
+  <section class="section faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-in">
+      <header class="section-head">
+        <h2 id="faq-title" class="section-title">よくある質問</h2>
+        <p class="section-lead">質問を押すと答えが開きます。</p>
+      </header>
+      <div class="faq-list" data-edit-id="monoa-faq"><details class="faq-item" data-edit-id="monoa-faq-1"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">話した内容は、そのまま保存されますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>いいえ。話した内容は日付・金額・内容に分けて入力欄へ入り、確認・修正してから保存します。自動では保存されません。</p></div></details><details class="faq-item" data-edit-id="monoa-faq-2"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">声を使わずに記録できますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>はい。手入力でも記録できます。ホーム画面のウィジェットからは、音声入力のほかクイック入力も開けます。</p></div></details><details class="faq-item" data-edit-id="monoa-faq-3"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">記録はどうやって探せますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>期間・カテゴリ・タグ・支払い方法を組み合わせて検索できます。日ごとの記録はカレンダーでも一覧できます。</p></div></details><details class="faq-item" data-edit-id="monoa-faq-4"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">Android でも使えますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>Android 版はテスト配布中で、一般公開前のため、このサイトではインストール先を案内していません。iPhone 版は App Store で公開中です。</p></div></details><details class="faq-item" data-edit-id="monoa-faq-5"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">料金はかかりますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>料金は App Store の掲載ページでご確認ください。</p></div></details></div>
+    </div>
+  </section>
+
+  <section class="section dist" id="dist" aria-labelledby="dist-title">
     <div class="wrap dist-in">
       <header class="section-head">
         <h2 id="dist-title" class="section-title">配布状況</h2>
@@ -152,10 +191,16 @@
       </header>
       <div>
         <dl class="dist-dl" data-edit-id="monoa-dist"><div><dt>iPhone（App Store）</dt><dd>公開中</dd></div><div><dt>Android</dt><dd>テスト配布中（一般公開前のため、ここではインストール先を案内していません）</dd></div><div><dt>料金</dt><dd>App Store の掲載ページでご確認ください</dd></div></dl>
-        <div class="app-actions">
-          <a class="btn btn-store" href="https://apps.apple.com/jp/app/id6827865587" target="_blank" rel="noopener noreferrer" data-edit-id="monoa-store">App Store で見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（新しいタブで開きます）</span></a>
-          <a class="btn btn-ghost" href="../../?app=monoa#contact" data-edit-id="monoa-contact">このアプリについて問い合わせる</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="cta" data-edit-id="monoa-cta">
+        <div class="cta-text">
+          <h3 class="cta-title" data-edit-id="monoa-cta-title">MonoA は App Store で公開中です</h3>
+          <p>iPhone 版は App Store からダウンロードできます。料金や対応機種は、App Store の掲載ページでご確認ください。</p>
+          <p class="cta-mail">お問い合わせフォームは受信を確認中です。お急ぎの場合は <a href="mailto:una.catena.della.morte@gmail.com">una.catena.della.morte@gmail.com</a> へ直接メールでご連絡ください。</p>
         </div>
+        <div class="app-actions cta-actions"><a class="btn btn-store" href="https://apps.apple.com/jp/app/id6827865587" target="_blank" rel="noopener noreferrer" data-edit-id="monoa-cta-store">App Store で見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（新しいタブで開きます）</span></a><a class="btn btn-ghost" href="../../?app=monoa#contact" data-edit-id="monoa-contact">このアプリについて問い合わせる</a></div>
       </div>
     </div>
   </section>

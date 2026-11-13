@@ -22,9 +22,9 @@
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-<link rel="stylesheet" href="../../assets/css/site.css?v=20261113-design">
-<script src="../../site-config.js?v=20261113-design" defer></script>
-<script src="../../assets/js/site.js?v=20261113-design" defer></script>
+<link rel="stylesheet" href="../../assets/css/site.css?v=20261113-detail">
+<script src="../../site-config.js?v=20261113-detail" defer></script>
+<script src="../../assets/js/site.js?v=20261113-detail" defer></script>
 </head>
 <body class="page-app" style="--app:#5b3fa8;--app-tint:#eeeaf7">
 <a class="skip" href="#main">本文へ移動</a>
@@ -74,42 +74,71 @@
     </div>
   </section>
 
-  <section class="section features" aria-labelledby="features-title">
+  <nav class="toc" aria-label="このページの内容" data-edit-id="vorel-toc">
+    <div class="wrap toc-in">
+      <p class="toc-label" aria-hidden="true">このページ</p>
+      <ul class="toc-list"><li><a href="#scenes" data-edit-id="vorel-toc-scenes">用途</a></li><li><a href="#features" data-edit-id="vorel-toc-features">機能を詳しく</a></li><li><a href="#steps" data-edit-id="vorel-toc-steps">使い方</a></li><li><a href="#gallery" data-edit-id="vorel-toc-gallery">画面</a></li><li><a href="#video" data-edit-id="vorel-toc-video">キャラクター</a></li><li><a href="#faq" data-edit-id="vorel-toc-faq">よくある質問</a></li><li><a href="#dist" data-edit-id="vorel-toc-dist">配布</a></li></ul>
+    </div>
+  </nav>
+
+  <section class="section scenes" id="scenes" aria-labelledby="scenes-title" data-edit-id="vorel-scenes">
     <div class="wrap">
       <header class="section-head">
-        <h2 id="features-title" class="section-title">開発中の主な機能</h2>
+        <h2 id="scenes-title" class="section-title">こんな時に使うことを想定しています</h2>
         <p class="section-lead">開発中のため、公開までに内容が変わる場合があります。</p>
       </header>
-      <ul class="feature-list"><li class="feature" data-edit-id="vorel-feature-1"><h3>送る前に文章で確かめる</h3><p>声で入力した内容を文字で確認・修正してから送る流れを作っています。</p></li><li class="feature" data-edit-id="vorel-feature-2"><h3>使うAIを選ぶ</h3><p>ChatGPT・Gemini などから使うAIを選ぶ仕組みを検討しています。利用には各サービス側の設定が必要になる予定です。</p></li><li class="feature" data-edit-id="vorel-feature-3"><h3>端末の中で読み上げ</h3><p>返答の文章を、端末内の音声で読み上げる機能を試作しています。</p></li><li class="feature" data-edit-id="vorel-feature-4"><h3>表示を選べる音声画面</h3><p>水滴のキャラクターや水面・光など、音声画面のデザインを選べるようにしています。</p></li></ul>
+      <ol class="scene-list"><li class="scene" data-edit-id="vorel-scene-1"><p class="scene-num" aria-hidden="true">01</p><h3 class="scene-title">文字を打つより、話したほうが早いとき</h3><p class="scene-text">マイクを押してやりたいことを話し、文字になった内容を確かめてから、選んだAIへ渡す使い方を想定しています。</p></li><li class="scene" data-edit-id="vorel-scene-2"><p class="scene-num" aria-hidden="true">02</p><h3 class="scene-title">言い間違いを直してから送りたいとき</h3><p class="scene-text">聞き取られた文章は、送る前に画面で確認して直せるようにしています。</p></li><li class="scene" data-edit-id="vorel-scene-3"><p class="scene-num" aria-hidden="true">03</p><h3 class="scene-title">その日の気分で画面を変えたいとき</h3><p class="scene-text">水滴のキャラクターや水面・光など、音声画面の見た目を選び替えられるようにしています。</p></li></ol>
     </div>
   </section>
 
-  <section class="section steps" aria-labelledby="steps-title">
+  <section class="section features" id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 id="features-title" class="section-title">開発中の機能を詳しく</h2>
+        <p class="section-lead">開発中の内容です。実際に使えるAIや公開の時期は、まだ決まっていません。</p>
+      </header>
+      <div class="story-list">
+      <article class="story" id="feature-confirm" aria-labelledby="story-confirm-title" data-edit-id="vorel-story-confirm">
+        <div class="story-text">
+          <p class="eyebrow story-eyebrow">声から文章へ</p>
+          <h3 id="story-confirm-title" class="story-title" data-edit-id="vorel-story-confirm-title">話した内容を、送る前に文章で確かめる。</h3>
+          <p class="story-body">録音した声を文字にし、その文章を確認・修正してから送る流れを作っています。返答は文章で表示し、端末内の音声で読み上げる機能も試作しています。</p>
+          <p class="story-points-label">想定している操作</p>
+          <ul class="story-points"><li>マイクを押して話す</li><li>文字になった内容を確かめ、必要なら直す</li><li>返答の読み上げは、声の種類と速さを選べる形で試作中です</li></ul>
+          <p class="story-note">使うAIは ChatGPT・Gemini・Claude・Grok を対象に開発しています。接続の方法や利用条件はサービスごとに異なり、各サービス側の利用権や設定が別に必要になる見込みです。</p>
+        </div>
+        <div class="story-media story-media-2"><figure class="story-shot"><img src="../../assets/media/vorel/screen-voice.webp" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の音声入力画面。水滴のキャラクターが表示されます。</figcaption></figure><figure class="story-shot"><img src="../../assets/media/vorel/screen-confirm.webp" alt="開発中の画面。声で入力した文章を確認してから送ります。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。声で入力した文章を確認してから送ります。</figcaption></figure></div>
+      </article>
+      <article class="story story-rev" id="feature-design" aria-labelledby="story-design-title" data-edit-id="vorel-story-design">
+        <div class="story-text">
+          <p class="eyebrow story-eyebrow">表示とキャラクター</p>
+          <h3 id="story-design-title" class="story-title" data-edit-id="vorel-story-design-title">音声画面の見た目は、6種類から選ぶ。</h3>
+          <p class="story-body">水滴のキャラクター、水面、波紋、光、球体、アシスタントの6種類から、音声画面の表示を選べるようにしています。</p>
+          <p class="story-points-label">想定している操作</p>
+          <ul class="story-points"><li>設定の「画面・UI」から音声画面の表示を選ぶ</li><li>ホーム画面のウィジェットも準備しています</li></ul>
+          <p class="story-note">開発中の画面です。公開までに内容やデザインが変わる場合があります。</p>
+        </div>
+        <div class="story-media story-media-1"><figure class="story-shot"><img src="../../assets/media/vorel/screen-design.webp" alt="開発中の画面。音声画面の表示デザインを選びます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。音声画面の表示デザインを選びます。</figcaption></figure></div>
+      </article>
+      </div>
+      <div class="feature-all" data-edit-id="vorel-feature-all">
+        <h3 class="feature-all-title">開発中の機能の一覧</h3>
+        <ul class="feature-list"><li class="feature" data-edit-id="vorel-feature-1"><h4>送る前に文章で確かめる</h4><p>声で入力した内容を文字で確認・修正してから送る流れを作っています。</p></li><li class="feature" data-edit-id="vorel-feature-2"><h4>使うAIを選ぶ</h4><p>ChatGPT・Gemini などから使うAIを選ぶ仕組みを検討しています。利用には各サービス側の設定が必要になる予定です。</p></li><li class="feature" data-edit-id="vorel-feature-3"><h4>端末の中で読み上げ</h4><p>返答の文章を、端末内の音声で読み上げる機能を試作しています。</p></li><li class="feature" data-edit-id="vorel-feature-4"><h4>表示を選べる音声画面</h4><p>水滴のキャラクターや水面・光など、音声画面のデザインを選べるようにしています。</p></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section steps" id="steps" aria-labelledby="steps-title">
     <div class="wrap">
       <header class="section-head">
         <h2 id="steps-title" class="section-title">想定している使い方</h2>
       </header>
-      <ol class="step-list">
-        <li class="step" data-edit-id="vorel-step-1">
-          <p class="step-num" aria-hidden="true">1</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>話しかける</h3><p>マイクを押して、やりたいことを話します。</p></div>
-          <img src="../../assets/media/vorel/screen-voice.webp" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" loading="lazy" decoding="async" class="phone step-img">
-        </li>
-        <li class="step" data-edit-id="vorel-step-2">
-          <p class="step-num" aria-hidden="true">2</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>文章で確かめる</h3><p>認識された文章を確認し、必要なら直します。</p></div>
-          <img src="../../assets/media/vorel/screen-confirm.webp" alt="開発中の画面。声で入力した文章を確認してから送ります。" width="640" height="1391" loading="lazy" decoding="async" class="phone step-img">
-        </li>
-        <li class="step" data-edit-id="vorel-step-3">
-          <p class="step-num" aria-hidden="true">3</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>画面を選ぶ</h3><p>水滴のキャラクターや水面など、音声画面の見た目を好みに合わせて選べるようにしています。</p></div>
-          <img src="../../assets/media/vorel/screen-design.webp" alt="開発中の画面。音声画面の表示デザインを選びます。" width="640" height="1391" loading="lazy" decoding="async" class="phone step-img">
-        </li>
+      <ol class="step-list"><li class="step" data-edit-id="vorel-step-1"><p class="step-num" aria-hidden="true">1</p><div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>話しかける</h3><p>マイクを押して、やりたいことを話します。</p></div></li><li class="step" data-edit-id="vorel-step-2"><p class="step-num" aria-hidden="true">2</p><div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>文章で確かめる</h3><p>認識された文章を確認し、必要なら直します。</p></div></li><li class="step" data-edit-id="vorel-step-3"><p class="step-num" aria-hidden="true">3</p><div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>画面を選ぶ</h3><p>水滴のキャラクターや水面など、音声画面の見た目を好みに合わせて選べるようにしています。</p></div></li>
       </ol>
     </div>
   </section>
 
-  <section class="section gallery" aria-labelledby="gallery-title">
+  <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
     <div class="wrap">
       <header class="section-head">
         <h2 id="gallery-title" class="section-title">実際の画面</h2>
@@ -117,7 +146,7 @@
       </header>
     </div>
     <div class="shots-scroller" tabindex="0" role="region" aria-label="VoRel の画面一覧（横にスクロールできます）">
-      <ul class="shots"><li class="shot" data-edit-id="vorel-shot-screen-voice"><figure><img src="../../assets/media/vorel/screen-voice.webp" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の音声入力画面。水滴のキャラクターが表示されます。</figcaption></figure></li><li class="shot" data-edit-id="vorel-shot-screen-confirm"><figure><img src="../../assets/media/vorel/screen-confirm.webp" alt="開発中の画面。声で入力した文章を確認してから送ります。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。声で入力した文章を確認してから送ります。</figcaption></figure></li><li class="shot" data-edit-id="vorel-shot-screen-design"><figure><img src="../../assets/media/vorel/screen-design.webp" alt="開発中の画面。音声画面の表示デザインを選びます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。音声画面の表示デザインを選びます。</figcaption></figure></li></ul>
+      <ul class="shots"><li class="shot" data-edit-id="vorel-shot-screen-voice"><figure><img src="../../assets/media/vorel/screen-voice.webp" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の音声入力画面。水滴のキャラクターが表示されます。</figcaption></figure><a class="shot-open" href="../../assets/media/vorel/screen-voice.webp" target="_blank" rel="noopener noreferrer" data-edit-id="vorel-shot-screen-voice-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（開発中の音声入力画面。水滴のキャラクターが表示されます。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="vorel-shot-screen-confirm"><figure><img src="../../assets/media/vorel/screen-confirm.webp" alt="開発中の画面。声で入力した文章を確認してから送ります。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。声で入力した文章を確認してから送ります。</figcaption></figure><a class="shot-open" href="../../assets/media/vorel/screen-confirm.webp" target="_blank" rel="noopener noreferrer" data-edit-id="vorel-shot-screen-confirm-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（開発中の画面。声で入力した文章を確認してから送ります。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="vorel-shot-screen-design"><figure><img src="../../assets/media/vorel/screen-design.webp" alt="開発中の画面。音声画面の表示デザインを選びます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。音声画面の表示デザインを選びます。</figcaption></figure><a class="shot-open" href="../../assets/media/vorel/screen-design.webp" target="_blank" rel="noopener noreferrer" data-edit-id="vorel-shot-screen-design-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（開発中の画面。音声画面の表示デザインを選びます。、新しいタブで開きます）</span></a></li></ul>
     </div>
     <p class="wrap shots-hint" aria-hidden="true">横にスクロールして、ほかの画面も見られます。</p>
   </section>
@@ -134,7 +163,17 @@
     </div>
   </section>
 
-  <section class="section dist" aria-labelledby="dist-title">
+  <section class="section faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-in">
+      <header class="section-head">
+        <h2 id="faq-title" class="section-title">よくある質問</h2>
+        <p class="section-lead">質問を押すと答えが開きます。</p>
+      </header>
+      <div class="faq-list" data-edit-id="vorel-faq"><details class="faq-item" data-edit-id="vorel-faq-1"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">いつ公開されますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>開発中です。公開の時期は決まっていません。</p></div></details><details class="faq-item" data-edit-id="vorel-faq-2"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">料金はかかりますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>料金や提供条件の詳細は公開時にご案内します。</p></div></details><details class="faq-item" data-edit-id="vorel-faq-3"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">どのAIを使えますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>ChatGPT・Gemini・Claude・Grok を対象に開発しています。接続の方法や利用条件はサービスごとに異なり、各サービス側の利用権や設定（たとえば Gemini はご自身の APIキーと同意）が別に必要になる見込みです。VoRel だけで各AIが使えるようになるわけではありません。</p></div></details><details class="faq-item" data-edit-id="vorel-faq-4"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">話した内容は、すぐAIに送られますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>送る前に、文字になった内容を確認・修正できる流れで作っています。</p></div></details><details class="faq-item" data-edit-id="vorel-faq-5"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">キャラクターは変えられますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>水滴のキャラクター、水面、波紋、光、球体、アシスタントの6種類から、音声画面の表示を選べるようにしています。</p></div></details></div>
+    </div>
+  </section>
+
+  <section class="section dist" id="dist" aria-labelledby="dist-title">
     <div class="wrap dist-in">
       <header class="section-head">
         <h2 id="dist-title" class="section-title">配布状況</h2>
@@ -142,10 +181,16 @@
       </header>
       <div>
         <dl class="dist-dl" data-edit-id="vorel-dist"><div><dt>状態</dt><dd>開発中です。公開の時期は決まっていません。</dd></div><div><dt>料金</dt><dd>公開時にご案内します。</dd></div></dl>
-        <div class="app-actions">
-          <p class="store-none" data-edit-id="vorel-store-none">まだ公開していません</p>
-          <a class="btn btn-ghost" href="../../?app=vorel#contact" data-edit-id="vorel-contact">このアプリについて問い合わせる</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="cta" data-edit-id="vorel-cta">
+        <div class="cta-text">
+          <h3 class="cta-title" data-edit-id="vorel-cta-title">公開に向けて開発しています</h3>
+          <p>公開の時期は決まっていません。料金や提供条件の詳細は公開時にご案内します。開発中のアプリへのご意見やご要望は、お問い合わせからどうぞ。</p>
+          <p class="cta-mail">お問い合わせフォームは受信を確認中です。お急ぎの場合は <a href="mailto:una.catena.della.morte@gmail.com">una.catena.della.morte@gmail.com</a> へ直接メールでご連絡ください。</p>
         </div>
+        <div class="app-actions cta-actions"><a class="btn btn-app" href="../../?app=vorel#contact" data-edit-id="vorel-contact">このアプリについて問い合わせる</a></div>
       </div>
     </div>
   </section>

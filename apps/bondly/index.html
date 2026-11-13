@@ -22,9 +22,9 @@
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-<link rel="stylesheet" href="../../assets/css/site.css?v=20261113-design">
-<script src="../../site-config.js?v=20261113-design" defer></script>
-<script src="../../assets/js/site.js?v=20261113-design" defer></script>
+<link rel="stylesheet" href="../../assets/css/site.css?v=20261113-detail">
+<script src="../../site-config.js?v=20261113-detail" defer></script>
+<script src="../../assets/js/site.js?v=20261113-detail" defer></script>
 </head>
 <body class="page-app" style="--app:#2747a8;--app-tint:#e8ecf8">
 <a class="skip" href="#main">本文へ移動</a>
@@ -74,42 +74,71 @@
     </div>
   </section>
 
-  <section class="section features" aria-labelledby="features-title">
+  <nav class="toc" aria-label="このページの内容" data-edit-id="bondly-toc">
+    <div class="wrap toc-in">
+      <p class="toc-label" aria-hidden="true">このページ</p>
+      <ul class="toc-list"><li><a href="#scenes" data-edit-id="bondly-toc-scenes">用途</a></li><li><a href="#features" data-edit-id="bondly-toc-features">機能を詳しく</a></li><li><a href="#steps" data-edit-id="bondly-toc-steps">使い方</a></li><li><a href="#gallery" data-edit-id="bondly-toc-gallery">画面</a></li><li><a href="#video" data-edit-id="bondly-toc-video">紹介動画</a></li><li><a href="#faq" data-edit-id="bondly-toc-faq">よくある質問</a></li><li><a href="#dist" data-edit-id="bondly-toc-dist">配布</a></li></ul>
+    </div>
+  </nav>
+
+  <section class="section scenes" id="scenes" aria-labelledby="scenes-title" data-edit-id="bondly-scenes">
     <div class="wrap">
       <header class="section-head">
-        <h2 id="features-title" class="section-title">できること</h2>
-        
+        <h2 id="scenes-title" class="section-title">こんな時に</h2>
+
       </header>
-      <ul class="feature-list"><li class="feature" data-edit-id="bondly-feature-1"><h3>人物の手帳</h3><p>連絡先・SNS・仕事・趣味・タグ・メモを、人ごとにまとめて記録できます。</p></li><li class="feature" data-edit-id="bondly-feature-2"><h3>会った記録と次の話題</h3><p>会った日・場所・話したことを残し、次に話したい話題もメモできます。</p></li><li class="feature" data-edit-id="bondly-feature-3"><h3>予定をカレンダーで</h3><p>会った記録とこれからの予定を、カレンダーで振り返れます。</p></li><li class="feature" data-edit-id="bondly-feature-4"><h3>すぐ見つかる</h3><p>名前やタグで検索。お気に入りの人も分かりやすく表示します。</p></li><li class="feature" data-edit-id="bondly-feature-5"><h3>選んだ項目だけプロフィール交換</h3><p>渡す項目を選んで確認してから共有できます（ログインが必要です）。</p></li><li class="feature" data-edit-id="bondly-feature-6"><h3>背景も色も自分好みに</h3><p>好きな画像とテーマカラーで着せ替えできます。</p></li></ul>
+      <ol class="scene-list"><li class="scene" data-edit-id="bondly-scene-1"><p class="scene-num" aria-hidden="true">01</p><h3 class="scene-title">久しぶりに会う前に</h3><p class="scene-text">その人のページを開いて、前に会った日と話したこと、メモしておいた「次に話す話題」を見返してから出かけます。</p></li><li class="scene" data-edit-id="bondly-scene-2"><p class="scene-num" aria-hidden="true">02</p><h3 class="scene-title">仕事で初めて会った人と別れたあと</h3><p class="scene-text">名前と仕事、会った日や場所、話した内容を、覚えているうちにその人の手帳へ残します。</p></li><li class="scene" data-edit-id="bondly-scene-3"><p class="scene-num" aria-hidden="true">03</p><h3 class="scene-title">連絡先を交換したいとき</h3><p class="scene-text">相手に渡す項目だけを選び、内容を確かめてからプロフィールを交換します（ログインが必要です）。</p></li></ol>
     </div>
   </section>
 
-  <section class="section steps" aria-labelledby="steps-title">
+  <section class="section features" id="features" aria-labelledby="features-title">
     <div class="wrap">
       <header class="section-head">
-        <h2 id="steps-title" class="section-title">3ステップで使い方</h2>
+        <h2 id="features-title" class="section-title">機能を詳しく</h2>
+
       </header>
-      <ol class="step-list">
-        <li class="step" data-edit-id="bondly-step-1">
-          <p class="step-num" aria-hidden="true">1</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>人を登録</h3><p>名前と、覚えておきたい情報を入力します。登録なしでも基本の記録が使えます。</p></div>
-          <img src="../../assets/media/bondly/screen-people.webp" alt="人物の詳細画面。プロフィールと会った回数・日付を表示します。" width="640" height="1391" loading="lazy" decoding="async" class="phone step-img">
-        </li>
-        <li class="step" data-edit-id="bondly-step-2">
-          <p class="step-num" aria-hidden="true">2</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>会った記録を残す</h3><p>会った日や話したこと、次に話したい話題をメモします。</p></div>
-          <img src="../../assets/media/bondly/screen-memory.webp" alt="メモと「次に話す話題」、会った記録の画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone step-img">
-        </li>
-        <li class="step" data-edit-id="bondly-step-3">
-          <p class="step-num" aria-hidden="true">3</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>次に会う前に見返す</h3><p>カレンダーや検索から、その人の記録をすぐに開けます。</p></div>
-          <img src="../../assets/media/bondly/screen-calendar.webp" alt="会った記録と予定を表示するカレンダー画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone step-img">
-        </li>
+      <div class="story-list">
+      <article class="story" id="feature-notebook" aria-labelledby="story-notebook-title" data-edit-id="bondly-story-notebook">
+        <div class="story-text">
+          <p class="eyebrow story-eyebrow">人と会話の記録</p>
+          <h3 id="story-notebook-title" class="story-title" data-edit-id="bondly-story-notebook-title">人ごとの手帳に、会った記録と次の話題を。</h3>
+          <p class="story-body">連絡先やSNS、仕事、趣味などの情報と、会った日・場所・話したことを、人ごとにまとめておけます。次に会うときに話したいことも、同じ人のページにメモしておけます。</p>
+          <p class="story-points-label">操作のポイント</p>
+          <ul class="story-points"><li>連絡先・SNS・仕事・趣味・タグ・メモを人ごとに記録</li><li>会った日・場所・話したことと、「次に話す話題」を残せます</li><li>会った回数と日付は、人物の画面で確認できます</li></ul>
+          <p class="story-note">基本の記録は、アカウント登録なしでも使えます。</p>
+        </div>
+        <div class="story-media story-media-2"><figure class="story-shot"><img src="../../assets/media/bondly/screen-people.webp" alt="人物の詳細画面。プロフィールと会った回数・日付を表示します。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>人物の詳細画面。プロフィールと会った回数・日付を表示します。</figcaption></figure><figure class="story-shot"><img src="../../assets/media/bondly/screen-memory.webp" alt="メモと「次に話す話題」、会った記録の画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>メモと「次に話す話題」、会った記録の画面。</figcaption></figure></div>
+      </article>
+      <article class="story story-rev" id="feature-exchange" aria-labelledby="story-exchange-title" data-edit-id="bondly-story-exchange">
+        <div class="story-text">
+          <p class="eyebrow story-eyebrow">プロフィール交換</p>
+          <h3 id="story-exchange-title" class="story-title" data-edit-id="bondly-story-exchange-title">渡す項目は、自分で選んで確かめてから。</h3>
+          <p class="story-body">プロフィールを交換するときは、相手に見せる項目を選び、内容を確認してから公開します。登録した情報が全部、自動で相手に渡るわけではありません。</p>
+          <p class="story-points-label">操作のポイント</p>
+          <ul class="story-points"><li>相手に渡す項目を選ぶ</li><li>表示される内容を確認してから公開する</li><li>URLやQRコードで相手に伝える</li></ul>
+          <p class="story-note">プロフィールの公開と交換には、ログインが必要です。</p>
+        </div>
+        <div class="story-media story-media-1"><figure class="story-shot"><img src="../../assets/media/bondly/screen-exchange.webp" alt="プロフィール交換で渡す項目を選ぶ画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>プロフィール交換で渡す項目を選ぶ画面。</figcaption></figure></div>
+      </article>
+      </div>
+      <div class="feature-all" data-edit-id="bondly-feature-all">
+        <h3 class="feature-all-title">機能の一覧</h3>
+        <ul class="feature-list"><li class="feature" data-edit-id="bondly-feature-1"><h4>人物の手帳</h4><p>連絡先・SNS・仕事・趣味・タグ・メモを、人ごとにまとめて記録できます。</p></li><li class="feature" data-edit-id="bondly-feature-2"><h4>会った記録と次の話題</h4><p>会った日・場所・話したことを残し、次に話したい話題もメモできます。</p></li><li class="feature" data-edit-id="bondly-feature-3"><h4>予定をカレンダーで</h4><p>会った記録とこれからの予定を、カレンダーで振り返れます。</p></li><li class="feature" data-edit-id="bondly-feature-4"><h4>すぐ見つかる</h4><p>名前やタグで検索。お気に入りの人も分かりやすく表示します。</p></li><li class="feature" data-edit-id="bondly-feature-5"><h4>選んだ項目だけプロフィール交換</h4><p>渡す項目を選んで確認してから共有できます（ログインが必要です）。</p></li><li class="feature" data-edit-id="bondly-feature-6"><h4>背景も色も自分好みに</h4><p>好きな画像とテーマカラーで着せ替えできます。</p></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section steps" id="steps" aria-labelledby="steps-title">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 id="steps-title" class="section-title">3ステップで分かる使い方</h2>
+      </header>
+      <ol class="step-list"><li class="step" data-edit-id="bondly-step-1"><p class="step-num" aria-hidden="true">1</p><div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>人を登録</h3><p>名前と、覚えておきたい情報を入力します。アカウント登録なしでも基本の記録が使えます。</p></div></li><li class="step" data-edit-id="bondly-step-2"><p class="step-num" aria-hidden="true">2</p><div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>会った記録を残す</h3><p>会った日や話したこと、次に話したい話題をメモします。</p></div></li><li class="step" data-edit-id="bondly-step-3"><p class="step-num" aria-hidden="true">3</p><div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>次に会う前に見返す</h3><p>カレンダーや検索から、その人の記録をすぐに開けます。</p></div></li>
       </ol>
     </div>
   </section>
 
-  <section class="section gallery" aria-labelledby="gallery-title">
+  <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
     <div class="wrap">
       <header class="section-head">
         <h2 id="gallery-title" class="section-title">実際の画面</h2>
@@ -117,7 +146,7 @@
       </header>
     </div>
     <div class="shots-scroller" tabindex="0" role="region" aria-label="Bondly の画面一覧（横にスクロールできます）">
-      <ul class="shots"><li class="shot" data-edit-id="bondly-shot-screen-people"><figure><img src="../../assets/media/bondly/screen-people.webp" alt="人物の詳細画面。プロフィールと会った回数・日付を表示します。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>人物の詳細画面。プロフィールと会った回数・日付を表示します。</figcaption></figure></li><li class="shot" data-edit-id="bondly-shot-screen-memory"><figure><img src="../../assets/media/bondly/screen-memory.webp" alt="メモと「次に話す話題」、会った記録の画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>メモと「次に話す話題」、会った記録の画面。</figcaption></figure></li><li class="shot" data-edit-id="bondly-shot-screen-calendar"><figure><img src="../../assets/media/bondly/screen-calendar.webp" alt="会った記録と予定を表示するカレンダー画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>会った記録と予定を表示するカレンダー画面。</figcaption></figure></li><li class="shot" data-edit-id="bondly-shot-screen-exchange"><figure><img src="../../assets/media/bondly/screen-exchange.webp" alt="プロフィール交換で渡す項目を選ぶ画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>プロフィール交換で渡す項目を選ぶ画面。</figcaption></figure></li><li class="shot" data-edit-id="bondly-shot-screen-search"><figure><img src="../../assets/media/bondly/screen-search.webp" alt="名前やタグで人物を検索する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>名前やタグで人物を検索する画面。</figcaption></figure></li><li class="shot" data-edit-id="bondly-shot-screen-theme"><figure><img src="../../assets/media/bondly/screen-theme.webp" alt="背景画像とテーマカラーを変えた人物画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>背景画像とテーマカラーを変えた人物画面。</figcaption></figure></li></ul>
+      <ul class="shots"><li class="shot" data-edit-id="bondly-shot-screen-people"><figure><img src="../../assets/media/bondly/screen-people.webp" alt="人物の詳細画面。プロフィールと会った回数・日付を表示します。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>人物の詳細画面。プロフィールと会った回数・日付を表示します。</figcaption></figure><a class="shot-open" href="../../assets/media/bondly/screen-people.webp" target="_blank" rel="noopener noreferrer" data-edit-id="bondly-shot-screen-people-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（人物の詳細画面。プロフィールと会った回数・日付を表示します。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="bondly-shot-screen-memory"><figure><img src="../../assets/media/bondly/screen-memory.webp" alt="メモと「次に話す話題」、会った記録の画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>メモと「次に話す話題」、会った記録の画面。</figcaption></figure><a class="shot-open" href="../../assets/media/bondly/screen-memory.webp" target="_blank" rel="noopener noreferrer" data-edit-id="bondly-shot-screen-memory-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（メモと「次に話す話題」、会った記録の画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="bondly-shot-screen-calendar"><figure><img src="../../assets/media/bondly/screen-calendar.webp" alt="会った記録と予定を表示するカレンダー画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>会った記録と予定を表示するカレンダー画面。</figcaption></figure><a class="shot-open" href="../../assets/media/bondly/screen-calendar.webp" target="_blank" rel="noopener noreferrer" data-edit-id="bondly-shot-screen-calendar-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（会った記録と予定を表示するカレンダー画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="bondly-shot-screen-exchange"><figure><img src="../../assets/media/bondly/screen-exchange.webp" alt="プロフィール交換で渡す項目を選ぶ画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>プロフィール交換で渡す項目を選ぶ画面。</figcaption></figure><a class="shot-open" href="../../assets/media/bondly/screen-exchange.webp" target="_blank" rel="noopener noreferrer" data-edit-id="bondly-shot-screen-exchange-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（プロフィール交換で渡す項目を選ぶ画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="bondly-shot-screen-search"><figure><img src="../../assets/media/bondly/screen-search.webp" alt="名前やタグで人物を検索する画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>名前やタグで人物を検索する画面。</figcaption></figure><a class="shot-open" href="../../assets/media/bondly/screen-search.webp" target="_blank" rel="noopener noreferrer" data-edit-id="bondly-shot-screen-search-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（名前やタグで人物を検索する画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="bondly-shot-screen-theme"><figure><img src="../../assets/media/bondly/screen-theme.webp" alt="背景画像とテーマカラーを変えた人物画面。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>背景画像とテーマカラーを変えた人物画面。</figcaption></figure><a class="shot-open" href="../../assets/media/bondly/screen-theme.webp" target="_blank" rel="noopener noreferrer" data-edit-id="bondly-shot-screen-theme-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（背景画像とテーマカラーを変えた人物画面。、新しいタブで開きます）</span></a></li></ul>
     </div>
     <p class="wrap shots-hint" aria-hidden="true">横にスクロールして、ほかの画面も見られます。</p>
   </section>
@@ -144,7 +173,17 @@
     </div>
   </section>
 
-  <section class="section dist" aria-labelledby="dist-title">
+  <section class="section faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-in">
+      <header class="section-head">
+        <h2 id="faq-title" class="section-title">よくある質問</h2>
+        <p class="section-lead">質問を押すと答えが開きます。</p>
+      </header>
+      <div class="faq-list" data-edit-id="bondly-faq"><details class="faq-item" data-edit-id="bondly-faq-1"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">アカウント登録をしないと使えませんか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>人の情報や会った記録などの基本の記録は、アカウント登録なしでも使えます。プロフィールの公開と交換にはログインが必要です。</p></div></details><details class="faq-item" data-edit-id="bondly-faq-2"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">プロフィールは、登録した情報が全部相手に見えますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>いいえ。相手に渡す項目を選び、内容を確認してから公開します。</p></div></details><details class="faq-item" data-edit-id="bondly-faq-3"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">会った人をあとから探すには？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>名前やタグで検索できます。お気に入りにした人も分かりやすく表示されます。会った記録と予定はカレンダーでも振り返れます。</p></div></details><details class="faq-item" data-edit-id="bondly-faq-4"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">Android でも使えますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>Android 版はテスト配布中で、一般公開前のため、このサイトではインストール先を案内していません。iPhone 版は App Store で公開中です。</p></div></details><details class="faq-item" data-edit-id="bondly-faq-5"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">料金はかかりますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>料金は App Store の掲載ページでご確認ください。</p></div></details></div>
+    </div>
+  </section>
+
+  <section class="section dist" id="dist" aria-labelledby="dist-title">
     <div class="wrap dist-in">
       <header class="section-head">
         <h2 id="dist-title" class="section-title">配布状況</h2>
@@ -152,10 +191,16 @@
       </header>
       <div>
         <dl class="dist-dl" data-edit-id="bondly-dist"><div><dt>iPhone（App Store）</dt><dd>公開中</dd></div><div><dt>Android</dt><dd>テスト配布中（一般公開前のため、ここではインストール先を案内していません）</dd></div><div><dt>料金</dt><dd>App Store の掲載ページでご確認ください</dd></div></dl>
-        <div class="app-actions">
-          <a class="btn btn-store" href="https://apps.apple.com/jp/app/id6819985528" target="_blank" rel="noopener noreferrer" data-edit-id="bondly-store">App Store で見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（新しいタブで開きます）</span></a>
-          <a class="btn btn-ghost" href="../../?app=bondly#contact" data-edit-id="bondly-contact">このアプリについて問い合わせる</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="cta" data-edit-id="bondly-cta">
+        <div class="cta-text">
+          <h3 class="cta-title" data-edit-id="bondly-cta-title">Bondly は App Store で公開中です</h3>
+          <p>iPhone 版は App Store からダウンロードできます。料金や対応機種は、App Store の掲載ページでご確認ください。</p>
+          <p class="cta-mail">お問い合わせフォームは受信を確認中です。お急ぎの場合は <a href="mailto:una.catena.della.morte@gmail.com">una.catena.della.morte@gmail.com</a> へ直接メールでご連絡ください。</p>
         </div>
+        <div class="app-actions cta-actions"><a class="btn btn-store" href="https://apps.apple.com/jp/app/id6819985528" target="_blank" rel="noopener noreferrer" data-edit-id="bondly-cta-store">App Store で見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（新しいタブで開きます）</span></a><a class="btn btn-ghost" href="../../?app=bondly#contact" data-edit-id="bondly-contact">このアプリについて問い合わせる</a></div>
       </div>
     </div>
   </section>

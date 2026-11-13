@@ -22,9 +22,9 @@
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-<link rel="stylesheet" href="../../assets/css/site.css?v=20261113-design">
-<script src="../../site-config.js?v=20261113-design" defer></script>
-<script src="../../assets/js/site.js?v=20261113-design" defer></script>
+<link rel="stylesheet" href="../../assets/css/site.css?v=20261113-detail">
+<script src="../../site-config.js?v=20261113-detail" defer></script>
+<script src="../../assets/js/site.js?v=20261113-detail" defer></script>
 </head>
 <body class="page-app" style="--app:#0d6b78;--app-tint:#e2f0f1">
 <a class="skip" href="#main">本文へ移動</a>
@@ -74,42 +74,82 @@
     </div>
   </section>
 
-  <section class="section features" aria-labelledby="features-title">
+  <nav class="toc" aria-label="このページの内容" data-edit-id="multicalendar-toc">
+    <div class="wrap toc-in">
+      <p class="toc-label" aria-hidden="true">このページ</p>
+      <ul class="toc-list"><li><a href="#scenes" data-edit-id="multicalendar-toc-scenes">用途</a></li><li><a href="#features" data-edit-id="multicalendar-toc-features">機能を詳しく</a></li><li><a href="#steps" data-edit-id="multicalendar-toc-steps">使い方</a></li><li><a href="#gallery" data-edit-id="multicalendar-toc-gallery">画面</a></li><li><a href="#video" data-edit-id="multicalendar-toc-video">紹介動画</a></li><li><a href="#faq" data-edit-id="multicalendar-toc-faq">よくある質問</a></li><li><a href="#dist" data-edit-id="multicalendar-toc-dist">配布</a></li></ul>
+    </div>
+  </nav>
+
+  <section class="section scenes" id="scenes" aria-labelledby="scenes-title" data-edit-id="multicalendar-scenes">
     <div class="wrap">
       <header class="section-head">
-        <h2 id="features-title" class="section-title">できること</h2>
-        
+        <h2 id="scenes-title" class="section-title">こんな時に</h2>
+
       </header>
-      <ul class="feature-list"><li class="feature" data-edit-id="multicalendar-feature-1"><h3>予定をひとつに</h3><p>自作のカレンダー、Googleカレンダー、端末のカレンダーをまとめて表示します。</p></li><li class="feature" data-edit-id="multicalendar-feature-2"><h3>大事な予定を埋もれさせない</h3><p>カレンダーの並び順で優先度を決め、狭い表示でも上位の予定を先に見せます。</p></li><li class="feature" data-edit-id="multicalendar-feature-3"><h3>シフトはボタンで</h3><p>よく使うシフトを登録しておけば、月カレンダーからタップで入力できます。</p></li><li class="feature" data-edit-id="multicalendar-feature-4"><h3>日をまたぐ予定も</h3><p>夜勤など日をまたぐ予定は、帯でつながって表示されます。</p></li><li class="feature" data-edit-id="multicalendar-feature-5"><h3>スタンプと色</h3><p>予定にスタンプやタグを付けて、ぱっと見分けられます。</p></li><li class="feature" data-edit-id="multicalendar-feature-6"><h3>写真で振り返る（有料プラン）</h3><p>その日に撮った写真を予定のそばに表示します。端末の写真へのアクセス許可が必要です。</p></li></ul>
+      <ol class="scene-list"><li class="scene" data-edit-id="multicalendar-scene-1"><p class="scene-num" aria-hidden="true">01</p><h3 class="scene-title">シフトと私用の予定が同じ日に重なるとき</h3><p class="scene-text">カレンダーの並び順を決めておくと、月カレンダーの狭い枠でも、上位のカレンダーの予定から先に表示されます。</p></li><li class="scene" data-edit-id="multicalendar-scene-2"><p class="scene-num" aria-hidden="true">02</p><h3 class="scene-title">翌月のシフト表が出たら</h3><p class="scene-text">よく使うシフトを一度登録しておき、月カレンダーからシフトのボタンをタップして入れていきます。</p></li><li class="scene" data-edit-id="multicalendar-scene-3"><p class="scene-num" aria-hidden="true">03</p><h3 class="scene-title">あの日どこへ行ったか思い出したいとき</h3><p class="scene-text">日の予定のそばに、その日に撮った写真を並べて振り返ります（有料プラン。端末の写真へのアクセス許可が必要です）。</p></li></ol>
     </div>
   </section>
 
-  <section class="section steps" aria-labelledby="steps-title">
+  <section class="section features" id="features" aria-labelledby="features-title">
     <div class="wrap">
       <header class="section-head">
-        <h2 id="steps-title" class="section-title">3ステップで使い方</h2>
+        <h2 id="features-title" class="section-title">機能を詳しく</h2>
+
       </header>
-      <ol class="step-list">
-        <li class="step" data-edit-id="multicalendar-step-1">
-          <p class="step-num" aria-hidden="true">1</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>カレンダーを用意</h3><p>自作のカレンダーを作るか、Googleや端末のカレンダーをつなぎます。</p></div>
-          <img src="../../assets/media/multicalendar/screen-order.webp" alt="カレンダーの並び順（優先度）を決める画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone step-img">
-        </li>
-        <li class="step" data-edit-id="multicalendar-step-2">
-          <p class="step-num" aria-hidden="true">2</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>シフトを登録</h3><p>月カレンダーから、登録済みのシフトをタップして入力します。</p></div>
-          <img src="../../assets/media/multicalendar/screen-shift.webp" alt="月カレンダーからシフトを登録する画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone step-img">
-        </li>
-        <li class="step" data-edit-id="multicalendar-step-3">
-          <p class="step-num" aria-hidden="true">3</p>
-          <div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>ひと目で確認</h3><p>月・日・リストで、優先度順に並んだ予定を確認します。</p></div>
-          <img src="../../assets/media/multicalendar/screen-month.webp" alt="シフトと予定が並ぶ月カレンダーの画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone step-img">
-        </li>
+      <div class="story-list">
+      <article class="story" id="feature-priority" aria-labelledby="story-priority-title" data-edit-id="multicalendar-story-priority">
+        <div class="story-text">
+          <p class="eyebrow story-eyebrow">カレンダーの優先順</p>
+          <h3 id="story-priority-title" class="story-title" data-edit-id="multicalendar-story-priority-title">大事な予定を、狭い枠でも埋もれさせない。</h3>
+          <p class="story-body">自作のカレンダー、Googleカレンダー、端末のカレンダーをひとつにまとめて表示します。カレンダーの並び順がそのまま優先度になり、表示しきれない日でも上位の予定から先に見えます。</p>
+          <p class="story-points-label">操作のポイント</p>
+          <ul class="story-points"><li>カレンダーの並び順を入れ替えて、優先度を決める</li><li>月カレンダーでは、上位のカレンダーの予定から表示</li><li>夜勤など日をまたぐ予定は、帯でつながって表示</li></ul>
+
+        </div>
+        <div class="story-media story-media-2"><figure class="story-shot"><img src="../../assets/media/multicalendar/screen-order.webp" alt="カレンダーの並び順（優先度）を決める画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>カレンダーの並び順（優先度）を決める画面。</figcaption></figure><figure class="story-shot"><img src="../../assets/media/multicalendar/screen-month.webp" alt="シフトと予定が並ぶ月カレンダーの画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>シフトと予定が並ぶ月カレンダーの画面。</figcaption></figure></div>
+      </article>
+      <article class="story story-rev" id="feature-shift" aria-labelledby="story-shift-title" data-edit-id="multicalendar-story-shift">
+        <div class="story-text">
+          <p class="eyebrow story-eyebrow">シフト入力</p>
+          <h3 id="story-shift-title" class="story-title" data-edit-id="multicalendar-story-shift-title">いつものシフトは、ボタンで入れる。</h3>
+          <p class="story-body">よく使うシフトを登録しておけば、月カレンダーからタップで入力できます。入れたシフトは、ほかの予定と同じ月カレンダーに並びます。</p>
+          <p class="story-points-label">操作のポイント</p>
+          <ul class="story-points"><li>よく使うシフトを登録しておく</li><li>月カレンダーから、登録済みのシフトをタップして入力</li><li>予定にはタグやスタンプも付けて見分けられます</li></ul>
+
+        </div>
+        <div class="story-media story-media-2"><figure class="story-shot"><img src="../../assets/media/multicalendar/screen-shift.webp" alt="月カレンダーからシフトを登録する画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>月カレンダーからシフトを登録する画面。</figcaption></figure><figure class="story-shot"><img src="../../assets/media/multicalendar/screen-stamp.webp" alt="予定にタグやスタンプを付ける画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>予定にタグやスタンプを付ける画面。</figcaption></figure></div>
+      </article>
+      <article class="story" id="feature-photos" aria-labelledby="story-photos-title" data-edit-id="multicalendar-story-photos">
+        <div class="story-text">
+          <p class="eyebrow story-eyebrow">写真と有料プラン</p>
+          <h3 id="story-photos-title" class="story-title" data-edit-id="multicalendar-story-photos-title">その日の写真を、予定のそばに。</h3>
+          <p class="story-body">日の予定と一緒に、その日に撮った写真を表示できます。写真の表示と、複数のGoogleアカウントをつなぐ機能は有料プランです。</p>
+          <p class="story-points-label">操作のポイント</p>
+          <ul class="story-points"><li>写真の表示には、端末の写真へのアクセス許可が必要です</li><li>仕事用と私用など、複数のGoogleアカウントをつなげます（有料プラン）</li></ul>
+          <p class="story-note">料金や有料プランの詳しい内容は、公開時にご案内します。</p>
+        </div>
+        <div class="story-media story-media-2"><figure class="story-shot"><img src="../../assets/media/multicalendar/screen-photos.webp" alt="日の予定と、その日の写真を表示する画面（有料プラン）。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>日の予定と、その日の写真を表示する画面（有料プラン）。</figcaption></figure><figure class="story-shot"><img src="../../assets/media/multicalendar/screen-accounts.webp" alt="複数のGoogleアカウントをつなぐ設定画面（有料プラン）。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>複数のGoogleアカウントをつなぐ設定画面（有料プラン）。</figcaption></figure></div>
+      </article>
+      </div>
+      <div class="feature-all" data-edit-id="multicalendar-feature-all">
+        <h3 class="feature-all-title">機能の一覧</h3>
+        <ul class="feature-list"><li class="feature" data-edit-id="multicalendar-feature-1"><h4>予定をひとつに</h4><p>自作のカレンダー、Googleカレンダー、端末のカレンダーをまとめて表示します。</p></li><li class="feature" data-edit-id="multicalendar-feature-2"><h4>大事な予定を埋もれさせない</h4><p>カレンダーの並び順で優先度を決め、狭い表示でも上位の予定を先に見せます。</p></li><li class="feature" data-edit-id="multicalendar-feature-3"><h4>シフトはボタンで</h4><p>よく使うシフトを登録しておけば、月カレンダーからタップで入力できます。</p></li><li class="feature" data-edit-id="multicalendar-feature-4"><h4>日をまたぐ予定も</h4><p>夜勤など日をまたぐ予定は、帯でつながって表示されます。</p></li><li class="feature" data-edit-id="multicalendar-feature-5"><h4>スタンプと色</h4><p>予定にスタンプやタグを付けて、ぱっと見分けられます。</p></li><li class="feature" data-edit-id="multicalendar-feature-6"><h4>写真で振り返る（有料プラン）</h4><p>その日に撮った写真を予定のそばに表示します。端末の写真へのアクセス許可が必要です。</p></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section steps" id="steps" aria-labelledby="steps-title">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 id="steps-title" class="section-title">3ステップで分かる使い方</h2>
+      </header>
+      <ol class="step-list"><li class="step" data-edit-id="multicalendar-step-1"><p class="step-num" aria-hidden="true">1</p><div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>カレンダーを用意</h3><p>自作のカレンダーを作るか、Googleや端末のカレンダーをつなぎます。</p></div></li><li class="step" data-edit-id="multicalendar-step-2"><p class="step-num" aria-hidden="true">2</p><div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>シフトを登録</h3><p>月カレンダーから、登録済みのシフトをタップして入力します。</p></div></li><li class="step" data-edit-id="multicalendar-step-3"><p class="step-num" aria-hidden="true">3</p><div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>ひと目で確認</h3><p>月・日・リストで、優先度順に並んだ予定を確認します。</p></div></li>
       </ol>
     </div>
   </section>
 
-  <section class="section gallery" aria-labelledby="gallery-title">
+  <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
     <div class="wrap">
       <header class="section-head">
         <h2 id="gallery-title" class="section-title">実際の画面</h2>
@@ -117,7 +157,7 @@
       </header>
     </div>
     <div class="shots-scroller" tabindex="0" role="region" aria-label="Multi Calendar の画面一覧（横にスクロールできます）">
-      <ul class="shots"><li class="shot" data-edit-id="multicalendar-shot-screen-month"><figure><img src="../../assets/media/multicalendar/screen-month.webp" alt="シフトと予定が並ぶ月カレンダーの画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>シフトと予定が並ぶ月カレンダーの画面。</figcaption></figure></li><li class="shot" data-edit-id="multicalendar-shot-screen-order"><figure><img src="../../assets/media/multicalendar/screen-order.webp" alt="カレンダーの並び順（優先度）を決める画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>カレンダーの並び順（優先度）を決める画面。</figcaption></figure></li><li class="shot" data-edit-id="multicalendar-shot-screen-shift"><figure><img src="../../assets/media/multicalendar/screen-shift.webp" alt="月カレンダーからシフトを登録する画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>月カレンダーからシフトを登録する画面。</figcaption></figure></li><li class="shot" data-edit-id="multicalendar-shot-screen-photos"><figure><img src="../../assets/media/multicalendar/screen-photos.webp" alt="日の予定と、その日の写真を表示する画面（有料プラン）。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>日の予定と、その日の写真を表示する画面（有料プラン）。</figcaption></figure></li><li class="shot" data-edit-id="multicalendar-shot-screen-stamp"><figure><img src="../../assets/media/multicalendar/screen-stamp.webp" alt="予定にタグやスタンプを付ける画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>予定にタグやスタンプを付ける画面。</figcaption></figure></li><li class="shot" data-edit-id="multicalendar-shot-screen-accounts"><figure><img src="../../assets/media/multicalendar/screen-accounts.webp" alt="複数のGoogleアカウントをつなぐ設定画面（有料プラン）。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>複数のGoogleアカウントをつなぐ設定画面（有料プラン）。</figcaption></figure></li></ul>
+      <ul class="shots"><li class="shot" data-edit-id="multicalendar-shot-screen-month"><figure><img src="../../assets/media/multicalendar/screen-month.webp" alt="シフトと予定が並ぶ月カレンダーの画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>シフトと予定が並ぶ月カレンダーの画面。</figcaption></figure><a class="shot-open" href="../../assets/media/multicalendar/screen-month.webp" target="_blank" rel="noopener noreferrer" data-edit-id="multicalendar-shot-screen-month-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（シフトと予定が並ぶ月カレンダーの画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="multicalendar-shot-screen-order"><figure><img src="../../assets/media/multicalendar/screen-order.webp" alt="カレンダーの並び順（優先度）を決める画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>カレンダーの並び順（優先度）を決める画面。</figcaption></figure><a class="shot-open" href="../../assets/media/multicalendar/screen-order.webp" target="_blank" rel="noopener noreferrer" data-edit-id="multicalendar-shot-screen-order-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（カレンダーの並び順（優先度）を決める画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="multicalendar-shot-screen-shift"><figure><img src="../../assets/media/multicalendar/screen-shift.webp" alt="月カレンダーからシフトを登録する画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>月カレンダーからシフトを登録する画面。</figcaption></figure><a class="shot-open" href="../../assets/media/multicalendar/screen-shift.webp" target="_blank" rel="noopener noreferrer" data-edit-id="multicalendar-shot-screen-shift-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（月カレンダーからシフトを登録する画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="multicalendar-shot-screen-photos"><figure><img src="../../assets/media/multicalendar/screen-photos.webp" alt="日の予定と、その日の写真を表示する画面（有料プラン）。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>日の予定と、その日の写真を表示する画面（有料プラン）。</figcaption></figure><a class="shot-open" href="../../assets/media/multicalendar/screen-photos.webp" target="_blank" rel="noopener noreferrer" data-edit-id="multicalendar-shot-screen-photos-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（日の予定と、その日の写真を表示する画面（有料プラン）。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="multicalendar-shot-screen-stamp"><figure><img src="../../assets/media/multicalendar/screen-stamp.webp" alt="予定にタグやスタンプを付ける画面。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>予定にタグやスタンプを付ける画面。</figcaption></figure><a class="shot-open" href="../../assets/media/multicalendar/screen-stamp.webp" target="_blank" rel="noopener noreferrer" data-edit-id="multicalendar-shot-screen-stamp-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（予定にタグやスタンプを付ける画面。、新しいタブで開きます）</span></a></li><li class="shot" data-edit-id="multicalendar-shot-screen-accounts"><figure><img src="../../assets/media/multicalendar/screen-accounts.webp" alt="複数のGoogleアカウントをつなぐ設定画面（有料プラン）。" width="640" height="1387" loading="lazy" decoding="async" class="phone"><figcaption>複数のGoogleアカウントをつなぐ設定画面（有料プラン）。</figcaption></figure><a class="shot-open" href="../../assets/media/multicalendar/screen-accounts.webp" target="_blank" rel="noopener noreferrer" data-edit-id="multicalendar-shot-screen-accounts-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（複数のGoogleアカウントをつなぐ設定画面（有料プラン）。、新しいタブで開きます）</span></a></li></ul>
     </div>
     <p class="wrap shots-hint" aria-hidden="true">横にスクロールして、ほかの画面も見られます。</p>
   </section>
@@ -144,7 +184,17 @@
     </div>
   </section>
 
-  <section class="section dist" aria-labelledby="dist-title">
+  <section class="section faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-in">
+      <header class="section-head">
+        <h2 id="faq-title" class="section-title">よくある質問</h2>
+        <p class="section-lead">質問を押すと答えが開きます。</p>
+      </header>
+      <div class="faq-list" data-edit-id="multicalendar-faq"><details class="faq-item" data-edit-id="multicalendar-faq-1"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">どのカレンダーをまとめられますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>自作のカレンダー、Googleカレンダー、端末のカレンダーをまとめて表示できます。複数のGoogleアカウントをつなぐのは有料プランの機能です。</p></div></details><details class="faq-item" data-edit-id="multicalendar-faq-2"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">どんな表示で予定を見られますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>月・日・リストで確認できます。日をまたぐ予定は、帯でつながって表示されます。</p></div></details><details class="faq-item" data-edit-id="multicalendar-faq-3"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">写真の表示は無料で使えますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>写真の表示は有料プランの機能です。また、端末の写真へのアクセスを許可する必要があります。</p></div></details><details class="faq-item" data-edit-id="multicalendar-faq-4"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">いつから使えますか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>最新版を App Store の審査に出しています（2026年11月11日時点の確認）。公開日は決まっていません。公開されたらこのページでお知らせします。</p></div></details><details class="faq-item" data-edit-id="multicalendar-faq-5"><summary><span class="faq-q" aria-hidden="true">Q</span><span class="faq-q-text">料金はいくらですか？</span><span class="faq-mark" aria-hidden="true"></span></summary><div class="faq-a"><p>基本機能と有料プランがあります。料金や提供条件の詳細は公開時にご案内します。</p></div></details></div>
+    </div>
+  </section>
+
+  <section class="section dist" id="dist" aria-labelledby="dist-title">
     <div class="wrap dist-in">
       <header class="section-head">
         <h2 id="dist-title" class="section-title">配布状況</h2>
@@ -152,10 +202,16 @@
       </header>
       <div>
         <dl class="dist-dl" data-edit-id="multicalendar-dist"><div><dt>iPhone（App Store）</dt><dd>最新版を App Store の審査に出しています（2026年11月11日時点の確認）。公開されたらこのページでお知らせします。</dd></div><div><dt>Android</dt><dd>テスト配布中（一般公開前のため、ここではインストール先を案内していません）</dd></div><div><dt>料金</dt><dd>基本機能と有料プランがあります。詳しい内容は公開時にご案内します。</dd></div></dl>
-        <div class="app-actions">
-          <p class="store-none" data-edit-id="multicalendar-store-none">App Store の最新版は審査中です</p>
-          <a class="btn btn-ghost" href="../../?app=multicalendar#contact" data-edit-id="multicalendar-contact">このアプリについて問い合わせる</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="cta" data-edit-id="multicalendar-cta">
+        <div class="cta-text">
+          <h3 class="cta-title" data-edit-id="multicalendar-cta-title">公開されたら、このページでお知らせします</h3>
+          <p>最新版は App Store の審査中です（2026年11月11日時点の確認）。公開日は決まっていません。料金や提供条件の詳細は公開時にご案内します。ご質問やご要望はお問い合わせからどうぞ。</p>
+          <p class="cta-mail">お問い合わせフォームは受信を確認中です。お急ぎの場合は <a href="mailto:una.catena.della.morte@gmail.com">una.catena.della.morte@gmail.com</a> へ直接メールでご連絡ください。</p>
         </div>
+        <div class="app-actions cta-actions"><a class="btn btn-app" href="../../?app=multicalendar#contact" data-edit-id="multicalendar-contact">このアプリについて問い合わせる</a></div>
       </div>
     </div>
   </section>
