@@ -6,7 +6,7 @@
 <title>Bondly — ヒトメモリー｜Ryo Idenuma のアプリ</title>
 <meta name="description" content="Bondly — ヒトメモリー：出会った人と交わした会話・予定を記録して、次に会うときに活かす人物手帳アプリです。">
 <link rel="canonical" href="https://unacatenadellamorte-cmd.github.io/ryo-apps/apps/bondly/">
-<meta name="theme-color" content="#f6f3ec">
+<meta name="theme-color" content="#ffffff">
 <meta name="color-scheme" content="light">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:type" content="website">
@@ -22,9 +22,9 @@
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-<link rel="stylesheet" href="../../assets/css/site.css?v=20261113">
-<script src="../../site-config.js?v=20261113" defer></script>
-<script src="../../assets/js/site.js?v=20261113" defer></script>
+<link rel="stylesheet" href="../../assets/css/site.css?v=20261113-design">
+<script src="../../site-config.js?v=20261113-design" defer></script>
+<script src="../../assets/js/site.js?v=20261113-design" defer></script>
 </head>
 <body class="page-app" style="--app:#2747a8;--app-tint:#e8ecf8">
 <a class="skip" href="#main">本文へ移動</a>
@@ -33,12 +33,15 @@
     <a class="brand" href="../../" data-edit-id="brand"><span class="brand-mark" aria-hidden="true">R</span><span class="brand-text">Ryo Idenuma のアプリ</span></a>
     <nav aria-label="サイト内">
       <ul class="nav">
-        <li><a href="../../#apps" aria-current="page" data-edit-id="nav-apps">アプリ</a></li>
+        <li><a href="../../#apps" data-edit-id="nav-apps">アプリ</a></li>
         <li><a href="../../#about" data-edit-id="nav-about">運営者</a></li>
         <li><a href="../../#contact" data-edit-id="nav-contact">お問い合わせ</a></li>
       </ul>
     </nav>
   </div>
+  <nav class="app-switch" aria-label="アプリごとの紹介ページ">
+    <ul class="wrap"><li><a href="../../apps/monoa/" style="--app:#1f5a43" data-edit-id="switch-monoa"><span class="dot" aria-hidden="true"></span>MonoA</a></li><li><a href="../../apps/bondly/" style="--app:#2747a8" aria-current="page" data-edit-id="switch-bondly"><span class="dot" aria-hidden="true"></span>Bondly</a></li><li><a href="../../apps/multicalendar/" style="--app:#0d6b78" data-edit-id="switch-multicalendar"><span class="dot" aria-hidden="true"></span>Multi Calendar</a></li><li><a href="../../apps/vorel/" style="--app:#5b3fa8" data-edit-id="switch-vorel"><span class="dot" aria-hidden="true"></span>VoRel</a></li></ul>
+  </nav>
 </header>
 
 <main id="main">
@@ -65,7 +68,7 @@
           <a class="btn btn-ghost" href="#video">紹介動画を見る</a>
         </div>
       </div>
-      <figure class="app-hero-media">
+      <figure class="app-hero-media" data-edit-id="bondly-hero-screen">
         <img src="../../assets/media/bondly/screen-people.webp" alt="人物の詳細画面。プロフィールと会った回数・日付を表示します。" width="640" height="1391" decoding="async" fetchpriority="high" class="phone">
       </figure>
     </div>
@@ -74,7 +77,6 @@
   <section class="section features" aria-labelledby="features-title">
     <div class="wrap">
       <header class="section-head">
-        <p class="eyebrow">Features<span class="eyebrow-ja">特徴</span></p>
         <h2 id="features-title" class="section-title">できること</h2>
         
       </header>
@@ -85,7 +87,6 @@
   <section class="section steps" aria-labelledby="steps-title">
     <div class="wrap">
       <header class="section-head">
-        <p class="eyebrow">How to<span class="eyebrow-ja">使い方</span></p>
         <h2 id="steps-title" class="section-title">3ステップで使い方</h2>
       </header>
       <ol class="step-list">
@@ -111,7 +112,6 @@
   <section class="section gallery" aria-labelledby="gallery-title">
     <div class="wrap">
       <header class="section-head">
-        <p class="eyebrow">Screens<span class="eyebrow-ja">実際の画面</span></p>
         <h2 id="gallery-title" class="section-title">実際の画面</h2>
         <p class="section-lead">画面は App Store 掲載用の画像です。サンプルデータを使い、写真は生成素材です。</p>
       </header>
@@ -125,7 +125,6 @@
   <section class="section video" id="video" aria-labelledby="video-title">
     <div class="wrap video-in">
       <header class="section-head">
-        <p class="eyebrow">Movie<span class="eyebrow-ja">紹介動画</span></p>
         <h2 id="video-title" class="section-title" data-edit-id="bondly-video-title">紹介動画（約36秒）</h2>
         <p class="section-lead">音声つきの縦長動画です。自動では再生されません。再生ボタンを押してご覧ください。</p>
       </header>
@@ -148,7 +147,6 @@
   <section class="section dist" aria-labelledby="dist-title">
     <div class="wrap dist-in">
       <header class="section-head">
-        <p class="eyebrow">Availability<span class="eyebrow-ja">配布状況</span></p>
         <h2 id="dist-title" class="section-title">配布状況</h2>
         <p class="section-lead">2026年11月13日時点の情報です。</p>
       </header>

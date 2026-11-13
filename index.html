@@ -6,7 +6,7 @@
 <title>Ryo Idenuma のアプリ</title>
 <meta name="description" content="個人開発者 Ryo Idenuma が作っているスマホアプリ（MonoA-話す家計簿- / Bondly / Multi Calendar / VoRel-ヴォレル-）の紹介サイトです。実際の画面と紹介動画で、使い方と配布状況をご案内します。">
 <link rel="canonical" href="https://unacatenadellamorte-cmd.github.io/ryo-apps/">
-<meta name="theme-color" content="#f6f3ec">
+<meta name="theme-color" content="#ffffff">
 <meta name="color-scheme" content="light">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:type" content="website">
@@ -22,9 +22,9 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/site.css?v=20261113">
-<script src="site-config.js?v=20261113" defer></script>
-<script src="assets/js/site.js?v=20261113" defer></script>
+<link rel="stylesheet" href="assets/css/site.css?v=20261113-design">
+<script src="site-config.js?v=20261113-design" defer></script>
+<script src="assets/js/site.js?v=20261113-design" defer></script>
 </head>
 <body class="page-home">
 <a class="skip" href="#main">本文へ移動</a>
@@ -39,6 +39,9 @@
       </ul>
     </nav>
   </div>
+  <nav class="app-switch" aria-label="アプリごとの紹介ページ">
+    <ul class="wrap"><li><a href="apps/monoa/" style="--app:#1f5a43" data-edit-id="switch-monoa"><span class="dot" aria-hidden="true"></span>MonoA</a></li><li><a href="apps/bondly/" style="--app:#2747a8" data-edit-id="switch-bondly"><span class="dot" aria-hidden="true"></span>Bondly</a></li><li><a href="apps/multicalendar/" style="--app:#0d6b78" data-edit-id="switch-multicalendar"><span class="dot" aria-hidden="true"></span>Multi Calendar</a></li><li><a href="apps/vorel/" style="--app:#5b3fa8" data-edit-id="switch-vorel"><span class="dot" aria-hidden="true"></span>VoRel</a></li></ul>
+  </nav>
 </header>
 
 <main id="main">
@@ -46,102 +49,106 @@
     <div class="wrap hero-in">
       <div class="hero-text">
         <p class="eyebrow" data-edit-id="hero-eyebrow">個人開発のスマホアプリ</p>
-        <h1 id="hero-title" class="hero-title" data-edit-id="hero-title"><span class="nb">毎日の</span><span class="nb">ちょっと面倒を、</span><br class="br-wide"><span class="nb">小さなアプリで</span><br class="br-wide"><span class="nb">ほどいていく。</span></h1>
-        <p class="hero-lead" data-edit-id="hero-lead">Ryo Idenuma が一人で企画・開発しているアプリを紹介します。声で付ける家計簿、出会った人の記録、仕事と暮らしの予定をまとめるカレンダー、声からAIを呼び出す音声アプリ（開発中）があります。</p>
+        <h1 id="hero-title" class="hero-title" data-edit-id="hero-title"><span class="nb">暮らしに、</span><br><span class="nb">ちょうどいいアプリを。</span></h1>
+        <p class="hero-lead" data-edit-id="hero-lead">家計簿、人の記録、カレンダー、音声AI。Ryo Idenuma が開発する4つのアプリを、画面と動画で紹介します。</p>
+        <p class="hero-index-label">アプリを選ぶ</p>
         <ul class="hero-index" aria-label="紹介しているアプリ">
-          <li><a href="#app-monoa" style="--app:#1f5a43"><span class="dot" aria-hidden="true"></span>MonoA<span class="hero-index-status">App Storeで公開中</span></a></li><li><a href="#app-bondly" style="--app:#2747a8"><span class="dot" aria-hidden="true"></span>Bondly<span class="hero-index-status">App Storeで公開中</span></a></li><li><a href="#app-multicalendar" style="--app:#0d6b78"><span class="dot" aria-hidden="true"></span>Multi Calendar<span class="hero-index-status">最新版を審査中</span></a></li><li><a href="#app-vorel" style="--app:#5b3fa8"><span class="dot" aria-hidden="true"></span>VoRel<span class="hero-index-status">開発中</span></a></li>
+          <li><a href="apps/monoa/" style="--app:#1f5a43"><img class="hero-index-icon" src="assets/media/monoa/icon.webp" alt="" width="256" height="256" decoding="async"><span class="hero-index-name">MonoA</span><span class="hero-index-status">App Storeで公開中</span></a></li><li><a href="apps/bondly/" style="--app:#2747a8"><img class="hero-index-icon" src="assets/media/bondly/icon.webp" alt="" width="256" height="256" decoding="async"><span class="hero-index-name">Bondly</span><span class="hero-index-status">App Storeで公開中</span></a></li><li><a href="apps/multicalendar/" style="--app:#0d6b78"><img class="hero-index-icon" src="assets/media/multicalendar/icon.webp" alt="" width="256" height="256" decoding="async"><span class="hero-index-name">Multi Calendar</span><span class="hero-index-status">最新版を審査中</span></a></li><li><a href="apps/vorel/" style="--app:#5b3fa8"><img class="hero-index-icon" src="assets/media/vorel/icon.webp" alt="" width="256" height="256" decoding="async"><span class="hero-index-name">VoRel</span><span class="hero-index-status">開発中</span></a></li>
         </ul>
       </div>
-      <div class="hero-fan"><figure class="fan-item fan-1" data-edit-id="hero-screen-monoa"><img src="assets/media/monoa/screen-voice.webp" alt="MonoA の音声入力画面" width="640" height="1391" loading="lazy" decoding="async" class="phone"></figure><figure class="fan-item fan-2" data-edit-id="hero-screen-bondly"><img src="assets/media/bondly/screen-people.webp" alt="Bondly の人物画面" width="640" height="1391" decoding="async" fetchpriority="high" class="phone"></figure><figure class="fan-item fan-3" data-edit-id="hero-screen-multicalendar"><img src="assets/media/multicalendar/screen-month.webp" alt="Multi Calendar の月カレンダー画面" width="640" height="1387" loading="lazy" decoding="async" class="phone"></figure></div>
+      <div class="hero-shots"><figure class="hero-shot hero-shot-1" data-edit-id="hero-screen-monoa"><img src="assets/media/monoa/screen-voice.webp" alt="MonoA の音声入力画面" width="640" height="1391" loading="lazy" decoding="async" class="phone"></figure><figure class="hero-shot hero-shot-2" data-edit-id="hero-screen-bondly"><img src="assets/media/bondly/screen-people.webp" alt="Bondly の人物画面" width="640" height="1391" decoding="async" fetchpriority="high" class="phone"></figure><figure class="hero-shot hero-shot-3" data-edit-id="hero-screen-multicalendar"><img src="assets/media/multicalendar/screen-month.webp" alt="Multi Calendar の月カレンダー画面" width="640" height="1387" loading="lazy" decoding="async" class="phone"></figure></div>
     </div>
   </section>
 
   <section class="section apps" id="apps" aria-labelledby="apps-title">
     <div class="wrap">
       <header class="section-head">
-        <p class="eyebrow">Apps<span class="eyebrow-ja">アプリ</span></p>
         <h2 id="apps-title" class="section-title" data-edit-id="apps-title">紹介しているアプリ</h2>
         <p class="section-lead">実際の画面と紹介動画で、それぞれの使い方をご案内しています。</p>
       </header>
-      <div class="app-rows">
-    <article class="app-row" id="app-monoa" style="--app:#1f5a43;--app-tint:#e6efe9" data-edit-id="app-row-monoa">
-      <div class="app-row-text">
-        <p class="app-num" aria-hidden="true">01</p>
+      <div class="app-grid">
+    <article class="app-card" id="app-monoa" style="--app:#1f5a43;--app-tint:#e6efe9" data-edit-id="app-row-monoa">
+      <a class="app-card-media" href="apps/monoa/" tabindex="-1" aria-hidden="true">
+        <img src="assets/media/monoa/screen-voice.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-a">
+        <img src="assets/media/monoa/screen-widgets.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-b">
+      </a>
+      <div class="app-card-body">
         <div class="app-id">
           <img src="assets/media/monoa/icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon">
-          <div>
+          <div class="app-id-text">
             <h3 class="app-name" data-edit-id="app-row-monoa-name">MonoA-話す家計簿-</h3>
             <p class="app-kana">モノア</p>
           </div>
         </div>
         <p class="app-catch" data-edit-id="app-row-monoa-catch">買った後に、スマホへひとこと。</p>
         <p class="app-lead">話す入力と手入力で収支を記録し、カレンダー・グラフ・検索で振り返る家計簿アプリです。</p>
-        <p class="app-meta"><span class="status status-live">App Storeで公開中</span></p>
-        <a class="btn btn-app" href="apps/monoa/" data-edit-id="app-row-monoa-more">MonoA を詳しく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-      <div class="app-row-media" aria-hidden="true">
-        <img src="assets/media/monoa/screen-voice.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-a">
-        <img src="assets/media/monoa/screen-widgets.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-b">
+        <div class="app-card-foot">
+          <p class="app-meta"><span class="status status-live">App Storeで公開中</span></p>
+          <a class="btn btn-app" href="apps/monoa/" data-edit-id="app-row-monoa-more">MonoA を詳しく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
       </div>
     </article>
-    <article class="app-row" id="app-bondly" style="--app:#2747a8;--app-tint:#e8ecf8" data-edit-id="app-row-bondly">
-      <div class="app-row-text">
-        <p class="app-num" aria-hidden="true">02</p>
+    <article class="app-card" id="app-bondly" style="--app:#2747a8;--app-tint:#e8ecf8" data-edit-id="app-row-bondly">
+      <a class="app-card-media" href="apps/bondly/" tabindex="-1" aria-hidden="true">
+        <img src="assets/media/bondly/screen-people.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-a">
+        <img src="assets/media/bondly/screen-memory.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-b">
+      </a>
+      <div class="app-card-body">
         <div class="app-id">
           <img src="assets/media/bondly/icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon">
-          <div>
+          <div class="app-id-text">
             <h3 class="app-name" data-edit-id="app-row-bondly-name">Bondly — ヒトメモリー</h3>
             <p class="app-kana">ボンドリー</p>
           </div>
         </div>
         <p class="app-catch" data-edit-id="app-row-bondly-catch">会った人のことを、ひとつの手帳に。</p>
         <p class="app-lead">出会った人と交わした会話・予定を記録して、次に会うときに活かす人物手帳アプリです。</p>
-        <p class="app-meta"><span class="status status-live">App Storeで公開中</span></p>
-        <a class="btn btn-app" href="apps/bondly/" data-edit-id="app-row-bondly-more">Bondly を詳しく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-      <div class="app-row-media" aria-hidden="true">
-        <img src="assets/media/bondly/screen-people.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-a">
-        <img src="assets/media/bondly/screen-memory.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-b">
+        <div class="app-card-foot">
+          <p class="app-meta"><span class="status status-live">App Storeで公開中</span></p>
+          <a class="btn btn-app" href="apps/bondly/" data-edit-id="app-row-bondly-more">Bondly を詳しく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
       </div>
     </article>
-    <article class="app-row" id="app-multicalendar" style="--app:#0d6b78;--app-tint:#e2f0f1" data-edit-id="app-row-multicalendar">
-      <div class="app-row-text">
-        <p class="app-num" aria-hidden="true">03</p>
+    <article class="app-card" id="app-multicalendar" style="--app:#0d6b78;--app-tint:#e2f0f1" data-edit-id="app-row-multicalendar">
+      <a class="app-card-media" href="apps/multicalendar/" tabindex="-1" aria-hidden="true">
+        <img src="assets/media/multicalendar/screen-month.webp" alt="" width="640" height="1387" loading="lazy" decoding="async" class="phone phone-a">
+        <img src="assets/media/multicalendar/screen-order.webp" alt="" width="640" height="1387" loading="lazy" decoding="async" class="phone phone-b">
+      </a>
+      <div class="app-card-body">
         <div class="app-id">
           <img src="assets/media/multicalendar/icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon">
-          <div>
+          <div class="app-id-text">
             <h3 class="app-name" data-edit-id="app-row-multicalendar-name">Multi Calendar</h3>
             <p class="app-kana">マルチカレンダー</p>
           </div>
         </div>
         <p class="app-catch" data-edit-id="app-row-multicalendar-catch">仕事も暮らしもシフトも、ひとつに。</p>
         <p class="app-lead">自作・Google・端末のカレンダーをまとめ、カレンダーごとの優先度で大事な予定を見やすくするアプリです。</p>
-        <p class="app-meta"><span class="status status-review">最新版を審査中</span></p>
-        <a class="btn btn-app" href="apps/multicalendar/" data-edit-id="app-row-multicalendar-more">Multi Calendar を詳しく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-      <div class="app-row-media" aria-hidden="true">
-        <img src="assets/media/multicalendar/screen-month.webp" alt="" width="640" height="1387" loading="lazy" decoding="async" class="phone phone-a">
-        <img src="assets/media/multicalendar/screen-order.webp" alt="" width="640" height="1387" loading="lazy" decoding="async" class="phone phone-b">
+        <div class="app-card-foot">
+          <p class="app-meta"><span class="status status-review">最新版を審査中</span></p>
+          <a class="btn btn-app" href="apps/multicalendar/" data-edit-id="app-row-multicalendar-more">Multi Calendar を詳しく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
       </div>
     </article>
-    <article class="app-row" id="app-vorel" style="--app:#5b3fa8;--app-tint:#eeeaf7" data-edit-id="app-row-vorel">
-      <div class="app-row-text">
-        <p class="app-num" aria-hidden="true">04</p>
+    <article class="app-card" id="app-vorel" style="--app:#5b3fa8;--app-tint:#eeeaf7" data-edit-id="app-row-vorel">
+      <a class="app-card-media" href="apps/vorel/" tabindex="-1" aria-hidden="true">
+        <img src="assets/media/vorel/screen-voice.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-a">
+        <img src="assets/media/vorel/screen-confirm.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-b">
+      </a>
+      <div class="app-card-body">
         <div class="app-id">
           <img src="assets/media/vorel/icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon">
-          <div>
+          <div class="app-id-text">
             <h3 class="app-name" data-edit-id="app-row-vorel-name">VoRel-ヴォレル-</h3>
             <p class="app-kana">ヴォレル</p>
           </div>
         </div>
         <p class="app-catch" data-edit-id="app-row-vorel-catch">ひと声から、つながる。</p>
         <p class="app-lead">声から、使いたいAIや自作アプリを呼び出す音声ハブを目指して開発中のアプリです。</p>
-        <p class="app-meta"><span class="status status-dev">開発中</span></p>
-        <a class="btn btn-app" href="apps/vorel/" data-edit-id="app-row-vorel-more">VoRel を詳しく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-      <div class="app-row-media" aria-hidden="true">
-        <img src="assets/media/vorel/screen-voice.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-a">
-        <img src="assets/media/vorel/screen-confirm.webp" alt="" width="640" height="1391" loading="lazy" decoding="async" class="phone phone-b">
+        <div class="app-card-foot">
+          <p class="app-meta"><span class="status status-dev">開発中</span></p>
+          <a class="btn btn-app" href="apps/vorel/" data-edit-id="app-row-vorel-more">VoRel を詳しく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
       </div>
     </article>
       </div>
@@ -151,7 +158,6 @@
   <section class="section about" id="about" aria-labelledby="about-title">
     <div class="wrap about-in">
       <header class="section-head">
-        <p class="eyebrow">About<span class="eyebrow-ja">運営者</span></p>
         <h2 id="about-title" class="section-title" data-edit-id="about-title">運営者について</h2>
       </header>
       <div class="about-body">
@@ -169,10 +175,14 @@
   <section class="section contact" id="contact" aria-labelledby="contact-title">
     <div class="wrap contact-in">
       <header class="section-head">
-        <p class="eyebrow">Contact<span class="eyebrow-ja">お問い合わせ</span></p>
         <h2 id="contact-title" class="section-title" data-edit-id="contact-title">お問い合わせ</h2>
         <p class="section-lead">アプリへのご質問・ご要望・不具合のご報告はこちらからどうぞ。お返事まで日数をいただく場合があります。</p>
       </header>
+
+      <div class="mail-direct" data-edit-id="contact-mail-direct">
+        <p class="mail-direct-text">現在、フォームの受信確認中です。お急ぎの場合は直接メールでご連絡ください。</p>
+        <a class="btn btn-primary" href="mailto:una.catena.della.morte@gmail.com" data-edit-id="contact-mail-button">メールで問い合わせる</a>
+      </div>
 
       <div class="notice" data-edit-id="contact-notice">
         <p class="notice-title">送信前にご確認ください</p>
@@ -187,6 +197,7 @@
         <input type="hidden" name="_subject" value="【アプリ紹介サイト】お問い合わせ">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="" data-next>
+        <input type="hidden" name="_url" value="https://unacatenadellamorte-cmd.github.io/ryo-apps/">
         <div class="hp" aria-hidden="true"><label>この欄は空のままにしてください<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
 
         <div class="field">
