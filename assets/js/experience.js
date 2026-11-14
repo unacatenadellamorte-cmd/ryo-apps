@@ -24,7 +24,10 @@
   function updateMotion() {
     reduced = media.matches || manual;
     document.documentElement.classList.toggle("motion-reduced", reduced);
-    if (reduced) running.forEach(function (a) { a.cancel(); });
+    if (reduced) {
+      running.forEach(function (a) { a.cancel(); });
+      document.querySelectorAll(".is-pressing").forEach(function (el) { el.classList.remove("is-pressing"); });
+    }
     document.querySelectorAll("[data-motion-toggle]").forEach(function (button) {
       button.hidden = false;
       button.disabled = media.matches;
@@ -223,9 +226,81 @@
         point = null; pane.style.removeProperty("--light-x"); pane.style.removeProperty("--light-y");
       });
     });
-    document.querySelectorAll(".btn").forEach(function (button) {
-      button.addEventListener("click", function () { motion(button, [{ transform: "scale(1)" }, { transform: "scale(.96)", offset: .35 }, { transform: "scale(1)" }], { duration: 260 }); });
+  }
+
+  function setupFeedback() {
+    var selector = ".btn, .nav a, .app-switch a, .toc-list a, .guide-nav a, .app-filters button, .motion-toggle, .shot-open, .faq-item summary, .notice summary";
+    document.querySelectorAll(selector).forEach(function (control) {
+      control.classList.add("touch-feedback");
+      function release() {
+        if (!control.classList.contains("is-pressing")) return;
+        var start = getComputedStyle(control).transform;
+        control.classList.remove("is-pressing");
+        motion(control, [{ transform: start }, { transform: "scale(1.035)", offset: .55 }, { transform: "scale(1)" }], { duration: 420 });
+      }
+      control.addEventListener("pointerdown", function (event) {
+        if (event.button !== 0 || control.disabled || reduced) return;
+        control.classList.add("is-pressing");
+      });
+      ["pointerup", "pointercancel", "pointerleave", "blur"].forEach(function (name) { control.addEventListener(name, release); });
+      control.addEventListener("keydown", function (event) {
+        if (!reduced && !event.repeat && (event.key === "Enter" || event.key === " ")) control.classList.add("is-pressing");
+      });
+      control.addEventListener("keyup", release);
+      control.addEventListener("click", function (event) {
+        release();
+        if (reduced || control.disabled) return;
+        var box = control.getBoundingClientRect();
+        var wave = document.createElement("span");
+        wave.className = "glass-wave";
+        wave.setAttribute("aria-hidden", "true");
+        var size = Math.min(600, Math.hypot(box.width, box.height) * 2);
+        wave.style.width = wave.style.height = size + "px";
+        wave.style.left = (event.detail ? event.clientX - box.left : box.width / 2) + "px";
+        wave.style.top = (event.detail ? event.clientY - box.top : box.height / 2) + "px";
+        // 連打でも装飾が積み上がらず、元の操作はすぐに通す。
+        var old = control.querySelectorAll(".glass-wave");
+        if (old.length >= 4) old[0].remove();
+        control.appendChild(wave);
+        after(motion(wave, [{ transform: "translate(-50%,-50%) scale(0)", opacity: .8 }, { transform: "translate(-50%,-50%) scale(1)", opacity: 0 }], { duration: 620 }), function () { wave.remove(); });
+      });
     });
+  }
+
+  function setupAppPicker() {
+    var root = document.querySelector("[data-app-picker]");
+    if (!root) return;
+    var buttons = Array.from(root.querySelectorAll("[data-app-filter]"));
+    var cards = Array.from(document.querySelectorAll(".app-grid > .app-card"));
+    var status = root.querySelector("[data-app-filter-status]");
+    var nav = root.querySelector(".app-filters"), selected = buttons[0];
+    function indicator() {
+      var box = selected.getBoundingClientRect(), parent = nav.getBoundingClientRect();
+      nav.style.setProperty("--pick-x", box.left - parent.left + "px");
+      nav.style.setProperty("--pick-y", box.top - parent.top + "px");
+      nav.style.setProperty("--pick-w", box.width + "px");
+      nav.style.setProperty("--pick-h", box.height + "px");
+    }
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        if (selected === button) return;
+        selected = button;
+        buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b === button)); });
+        var count = 0;
+        cards.forEach(function (card) {
+          card.hidden = button.dataset.appFilter !== "all" && card.id !== "app-" + button.dataset.appFilter;
+          if (!card.hidden) {
+            motion(card, [{ opacity: .3, transform: "translateY(12px) scale(.98)" }, { opacity: 1, transform: "translateY(0) scale(1)" }], { duration: 420, delay: count++ * 45 });
+          }
+        });
+        status.textContent = button.dataset.appFilter === "all" ? "4つのアプリを表示中" : button.textContent + "のアプリを表示中・「すべて」で一覧に戻れます";
+        indicator();
+      });
+    });
+    root.hidden = false;
+    indicator();
+    if (window.ResizeObserver) new ResizeObserver(indicator).observe(nav);
+    else window.addEventListener("resize", indicator);
   }
 
   function setupReading() {
@@ -261,7 +336,7 @@
     });
     if (media.addEventListener) media.addEventListener("change", updateMotion);
     document.querySelectorAll("[data-screen-guide]").forEach(setupGuide);
-    setupViewer(); setupFaq(); setupGlass(); setupReading();
+    setupViewer(); setupFaq(); setupGlass(); setupReading(); setupAppPicker(); setupFeedback();
     if (!location.hash) {
       var title = document.querySelector(".hero-text,.app-hero-text");
       if (title) motion(title, [{ opacity: .3, transform: "translateY(10px)" }, { opacity: 1, transform: "translateY(0)" }], { duration: 550 });
