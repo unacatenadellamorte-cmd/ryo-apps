@@ -22,9 +22,10 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../assets/css/site.css?v=20261113-glass">
-<script src="../site-config.js?v=20261113-glass" defer></script>
-<script src="../assets/js/site.js?v=20261113-glass" defer></script>
+<link rel="stylesheet" href="../assets/css/site.css?v=20261114-experience">
+<script src="../site-config.js?v=20261114-experience" defer></script>
+<script src="../assets/js/site.js?v=20261114-experience" defer></script>
+<script src="../assets/js/experience.js?v=20261114-experience" defer></script>
 <meta name="robots" content="noindex">
 </head>
 <body class="page-doc">
@@ -43,6 +44,7 @@
   <nav class="app-switch" aria-label="アプリごとの紹介ページ">
     <ul class="wrap"><li><a href="../apps/monoa/index.html" style="--app:#1f5a43" data-edit-id="switch-monoa"><span class="dot" aria-hidden="true"></span>MonoA</a></li><li><a href="../apps/bondly/index.html" style="--app:#2747a8" data-edit-id="switch-bondly"><span class="dot" aria-hidden="true"></span>Bondly</a></li><li><a href="../apps/multicalendar/index.html" style="--app:#0d6b78" data-edit-id="switch-multicalendar"><span class="dot" aria-hidden="true"></span>Multi Calendar</a></li><li><a href="../apps/vorel/index.html" style="--app:#5b3fa8" data-edit-id="switch-vorel"><span class="dot" aria-hidden="true"></span>VoRel</a></li></ul>
   </nav>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
 </header>
 
 <main id="main">
@@ -75,8 +77,26 @@
   </div>
   <div class="wrap footer-bottom">
     <p>© 2026 Ryo Idenuma</p>
+    <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false" hidden>動きを控えめに</button>
     <p class="footer-small">App Store は Apple Inc. のサービスです。Google カレンダーは Google LLC のサービスです。</p>
   </div>
 </footer>
+<dialog class="viewer" data-viewer aria-label="アプリ画面の拡大表示">
+  <div class="viewer-surface">
+    <div class="viewer-bar">
+      <p data-viewer-count></p>
+      <button class="btn btn-ghost" type="button" data-viewer-close autofocus>閉じる</button>
+    </div>
+    <div class="viewer-media" data-viewer-media><img data-viewer-image alt="" width="640" height="1391"></div>
+    <p class="viewer-caption" data-viewer-caption></p>
+    <p class="viewer-state" data-viewer-state role="status" aria-live="polite"></p>
+    <div class="viewer-actions">
+      <button class="btn btn-ghost" type="button" data-viewer-prev>前の画面</button>
+      <button class="btn btn-ghost" type="button" data-viewer-zoom aria-pressed="false">拡大する</button>
+      <button class="btn btn-ghost" type="button" data-viewer-next>次の画面</button>
+      <a data-viewer-original target="_blank" rel="noopener noreferrer">元の画像を開く<span class="visually-hidden">（新しいタブで開きます）</span></a>
+    </div>
+  </div>
+</dialog>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* IDE App：ネイビーと透明なガラス。実画面と文字の読みやすさを保つ。 */
 
 :root {
-  --bg: #f7faff;
+  --bg: #eaf1fa;
   --bg-2: #eef3f9;      /* 区切り用の淡いグレー */
   --card: #ffffff;
   --ink: #172334;
@@ -26,7 +26,8 @@
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 0; }
 body {
   margin: 0;
-  background: var(--bg);
+  background: radial-gradient(ellipse at 10% 12%, #d5e9f8, transparent 45%), radial-gradient(ellipse at 92% 48%, #e4ddf6, transparent 42%), radial-gradient(ellipse at 18% 87%, #d3e9e7, transparent 45%), var(--bg);
+  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1rem;
@@ -662,7 +663,134 @@ ul[class], ol[class] { list-style: none; padding: 0; }
   .hero-shot:hover, .hero-shot a:hover, .app-card-media:hover .phone { transform: none; }
 }
 
+/* ---------- 全体のガラス面 ---------- */
+[hidden] { display: none !important; }
+.section { position: relative; isolation: isolate; background: transparent; border: 0; }
+.section::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  inset: 16px max(10px, calc((100% - 1240px) / 2)); border-radius: 38px;
+  border: 1px solid rgba(255,255,255,.85);
+  background: linear-gradient(135deg, rgba(255,255,255,.66), rgba(255,255,255,.24));
+  box-shadow: inset 0 2px 1px #fff, inset 0 -1px 1px rgba(144,165,195,.2), 0 24px 70px -52px rgba(33,60,96,.28);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.app-card { position: relative; padding: 10px; border: 1px solid rgba(255,255,255,.8); border-radius: 30px; background: rgba(255,255,255,.28); box-shadow: inset 0 1px 1px #fff, 0 16px 40px -32px rgba(26,52,87,.3); }
+.app-card-body { padding: 24px 14px 18px; }
+.scene, .step, .feature, .other, .video-desc, .cta {
+  position: relative; border: 1px solid rgba(255,255,255,.86); border-radius: 22px;
+  background: linear-gradient(135deg,rgba(255,255,255,.64),rgba(255,255,255,.24));
+  box-shadow: inset 0 1px 1px #fff, 0 12px 30px -26px rgba(33,60,96,.3);
+}
+.scene, .feature { padding: 22px; }
+.scene-title { margin-top: 0; }
+.feature-list { gap: 16px; }
+.story-media, .app-hero-media, .app-card-media { background: linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.18)), radial-gradient(ellipse at 90% 90%,var(--app-tint),#d6e5f3); }
+.story-note, .guide-condition { border-left-color: color-mix(in srgb,var(--app) 40%,transparent); }
+.site-header { view-transition-name: site-header; transition: background-color .25s, box-shadow .25s; }
+.site-header.is-scrolled { box-shadow: 0 10px 40px rgba(26,47,76,.14), inset 0 1px 0 #fff; }
+.reading-progress { position: absolute; bottom: 0; left: 24px; right: 24px; height: 2px; overflow: hidden; border-radius: 2px; }
+.reading-progress span { display: block; height: 100%; background: var(--app); transform: scaleX(0); transform-origin: left; }
+.toc { position: sticky; top: calc(var(--header-h) + 24px); z-index: 40; width: min(100% - 24px,1240px); margin-inline: auto; border: 1px solid rgba(255,255,255,.85); border-radius: 20px; background: rgba(248,252,255,.86); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: inset 0 1px 0 #fff,0 8px 24px -18px rgba(26,47,76,.25); }
+.page-app [id] { scroll-margin-top: calc(var(--header-h) + 96px); }
+.toc-list a[aria-current="location"] { color: var(--app); background: color-mix(in srgb,var(--app) 10%,#fff); box-shadow: inset 0 0 0 1px color-mix(in srgb,var(--app) 18%,transparent); }
+.glass-reactive { --light-x: 50%; --light-y: 0%; }
+.glass-reactive::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: radial-gradient(260px circle at var(--light-x) var(--light-y), rgba(255,255,255,.23),transparent 70%); }
+.btn, .sns-link, .other { transition: background-color .2s, border-color .2s, box-shadow .2s; }
+.btn:focus-visible, .other:focus-visible { box-shadow: 0 0 0 6px rgba(28,102,192,.13); }
+.faq-item summary { transition: color .18s, padding-left .18s; }
+.faq-item summary:hover { padding-left: 10px; }
+.faq-item { overflow: visible; }
+.faq-a { box-sizing: border-box; }
+.motion-toggle { justify-self: start; padding: 8px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #62738a; color: #e1e9f3; background: rgba(255,255,255,.07); font: inherit; cursor: pointer; }
+.motion-toggle:hover { background: rgba(255,255,255,.15); }
+.motion-toggle:disabled { cursor: default; }
+
+/* ---------- 実画面を選びながら読めるガイド ---------- */
+.screen-guide { min-width: 0; }
+.guide-nav { position: relative; display: flex; flex-wrap: wrap; gap: 6px; padding: 8px; margin-bottom: 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,.85); background: rgba(237,245,253,.5); }
+.guide-nav a { position: relative; z-index: 1; display: inline-flex; align-items: center; min-height: 44px; padding: 10px 16px; border-radius: 999px; font-size: .9rem; font-weight: 600; text-decoration: none; color: var(--ink-2); }
+.guide-nav a:hover { color: var(--app); background: rgba(255,255,255,.3); }
+.guide-nav a[aria-selected="true"] { color: var(--app); }
+.is-enhanced .guide-nav::before { content: ""; position: absolute; top: 0; left: 0; pointer-events: none; width: var(--tab-w,0px); height: var(--tab-h,0px); transform: translate(var(--tab-x,0px),var(--tab-y,0px)); border: 1px solid #fff; border-radius: 999px; background: rgba(255,255,255,.8); box-shadow: inset 0 1px 1px #fff,0 6px 16px -10px rgba(24,57,93,.4); transition: transform .28s cubic-bezier(.2,.75,.25,1), width .28s, height .28s; }
+.guide-stage { position: relative; padding: clamp(20px,4vw,44px); border: 1px solid rgba(255,255,255,.95); border-radius: 32px; background: linear-gradient(145deg,rgba(255,255,255,.68),rgba(255,255,255,.24)); box-shadow: inset 0 2px 1px #fff,0 24px 60px -42px rgba(31,62,101,.3); }
+.guide-panel { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: clamp(24px,5vw,64px); align-items: center; position: relative; }
+.guide-panel + .guide-panel { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 32px; }
+.is-enhanced .guide-panel { margin: 0; padding: 0; border: 0; }
+.guide-figure { min-width: 0; text-align: center; }
+.guide-figure .phone { width: auto; height: min(540px,66vh); max-width: 100%; object-fit: contain; margin-inline: auto; box-shadow: 0 16px 40px -24px rgba(28,48,74,.4); }
+.guide-figure figcaption { font-size: .8rem; line-height: 1.7; color: var(--ink-3); max-width: 28em; margin: 14px auto 0; }
+.guide-copy { min-height: 410px; }
+.guide-copy h3 { margin: 10px 0 18px; font-size: clamp(1.6rem,3vw,2.3rem); letter-spacing: -.025em; }
+.guide-description { color: var(--ink-2); }
+.guide-copy h4 { font-size: .9rem; margin: 26px 0 12px; }
+.guide-actions { list-style: decimal; padding-left: 1.6em !important; display: grid; gap: 12px; font-size: .95rem; color: var(--ink-2); }
+.guide-actions li { padding-left: 4px; }
+.guide-actions li::marker { color: var(--app); font-weight: 700; }
+.guide-condition { margin-top: 24px; border-left: 2px solid color-mix(in srgb,var(--app) 40%,transparent); padding-left: 16px; font-size: .85rem; color: var(--ink-3); }
+.guide-condition h4 { margin: 0 0 6px; color: var(--ink-2); }
+.guide-controls { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 12px; margin-top: 22px; }
+.guide-controls .btn:disabled, .viewer-actions .btn:disabled { opacity: .45; cursor: default; }
+.guide-status { text-align: center; font-size: .84rem; color: var(--ink-3); }
+
+/* ---------- 元画像のまま見比べる拡大表示 ---------- */
+.viewer-open { overflow: hidden; }
+.viewer { width: min(1080px,calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 0; border: 0; color: var(--ink); background: transparent; overflow: visible; }
+.viewer::backdrop { background: rgba(11,23,39,.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.viewer-surface { max-height: calc(100dvh - 32px); overflow: auto; padding: clamp(16px,3vw,28px); border-radius: 30px; border: 1px solid rgba(255,255,255,.86); background: linear-gradient(135deg,rgba(247,252,255,.97),rgba(235,244,253,.94)); box-shadow: inset 0 2px 0 #fff,0 30px 100px rgba(3,12,24,.35); }
+.viewer-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+.viewer-bar p { font-size: .9rem; font-weight: 700; color: var(--ink-2); }
+.viewer-media { max-height: 62dvh; overflow: auto; border-radius: 18px; background: rgba(214,228,244,.5); padding: 16px; }
+.viewer-media img { width: auto; height: auto; max-width: 100%; max-height: 58dvh; object-fit: contain; margin-inline: auto; border-radius: 12px; }
+.viewer-media.is-zoomed img { width: 640px; max-width: none; max-height: none; }
+.viewer-caption { margin-top: 14px; font-size: .9rem; color: var(--ink-2); }
+.viewer-state { font-size: .85rem; color: var(--ink-3); }
+.viewer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
+.viewer-actions a { margin-left: auto; font-size: .84rem; min-height: 44px; display: inline-flex; align-items: center; }
+
+@media (max-width: 760px) {
+  body { background-attachment: scroll; }
+  .section::before { inset: 12px 6px; border-radius: 28px; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .app-card-body { padding-inline: 10px; }
+  .guide-panel { grid-template-columns: 1fr; }
+  .guide-figure .phone { height: 360px; }
+  .guide-copy { min-height: 0; }
+  .guide-nav { padding: 6px; border-radius: 20px; gap: 4px; }
+  .guide-nav a { padding: 8px 11px; font-size: .82rem; }
+  .guide-controls { gap: 8px; }
+  .guide-controls .btn { padding: 8px 12px; font-size: .8rem; }
+  .guide-status { font-size: .76rem; }
+  .toc { position: static; border-radius: 16px; }
+  .page-app [id] { scroll-margin-top: calc(var(--header-h) + 24px); }
+  .viewer { width: calc(100% - 16px); max-height: calc(100dvh - 16px); }
+  .viewer-surface { max-height: calc(100dvh - 16px); border-radius: 22px; }
+  .viewer-actions .btn { font-size: .8rem; padding-inline: 12px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation: page-away .16s ease-out both; }
+  ::view-transition-new(root) { animation: page-arrive .3s cubic-bezier(.2,.75,.25,1) both; }
+}
+@keyframes page-away { to { opacity: 0; } }
+@keyframes page-arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+:root.motion-reduced { scroll-behavior: auto; }
+.motion-reduced *, .motion-reduced *::before, .motion-reduced *::after { transition: none !important; animation: none !important; }
+.motion-reduced .glass-reactive::before { display: none; }
+.motion-reduced .hero-shot:hover, .motion-reduced .app-card-media:hover .phone { transform: none; }
+:root.motion-reduced::view-transition-old(root), :root.motion-reduced::view-transition-new(root), :root.motion-reduced::view-transition-group(site-header) { animation: none !important; }
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .section::before, .app-card, .scene, .step, .feature, .other, .video-desc, .cta, .guide-stage, .guide-nav, .toc { background: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .glass-reactive::before { display: none; }
+}
+
 /* ---------- 印刷 ---------- */
 @media print {
-  .site-header, .skip, .hero-shots, .shots-hint, .form, .notice, .mail-direct, .toc { display: none !important; }
+  .site-header, .skip, .hero-shots, .shots-hint, .form, .notice, .mail-direct, .toc, .guide-nav, .guide-controls, .motion-toggle, .viewer { display: none !important; }
 }
+
+@media print { .section::before { display: none; } .guide-panel[hidden] { display: grid !important; } .guide-panel + .guide-panel { margin-top: 32px; } }
+
+.motion-toggle::before { content: ""; display: inline-block; vertical-align: -.05em; width: .85em; height: .85em; margin-right: .55em; border-radius: 50%; border: 1px solid currentColor; }
+.motion-toggle[aria-pressed="true"]::before { background: #c6e3ff; box-shadow: 0 0 12px rgba(198,227,255,.4); }
+.motion-reduced .faq-item summary:hover { padding-left: 4px; }
+
+.viewer-bar { position: sticky; top: -1px; z-index: 3; padding: 8px; border: 1px solid #fff; border-radius: 16px; background: rgba(244,249,255,.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
