@@ -22,10 +22,10 @@
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-<link rel="stylesheet" href="../../assets/css/site.css?v=20261114-playglass">
-<script src="../../site-config.js?v=20261114-playglass" defer></script>
-<script src="../../assets/js/site.js?v=20261114-playglass" defer></script>
-<script src="../../assets/js/experience.js?v=20261114-playglass" defer></script>
+<link rel="stylesheet" href="../../assets/css/site.css?v=20261116-storyflow">
+<script src="../../site-config.js?v=20261116-storyflow" defer></script>
+<script src="../../assets/js/site.js?v=20261116-storyflow" defer></script>
+<script src="../../assets/js/experience.js?v=20261116-storyflow" defer></script>
 </head>
 <body class="page-app" style="--app:#5b3fa8;--app-tint:#eeeaf7">
 <a class="skip" href="#main">本文へ移動</a>
@@ -60,7 +60,7 @@
     <div class="wrap app-hero-in">
       <div class="app-hero-text">
         <div class="app-id">
-          <img src="../../assets/media/vorel/icon.webp?v=20261114-playglass" alt="VoRel のアイコン" width="256" height="256" decoding="async" fetchpriority="high" class="app-icon app-icon-lg">
+          <img src="../../assets/media/vorel/icon.webp?v=20261116-storyflow" alt="VoRel のアイコン" width="256" height="256" decoding="async" fetchpriority="high" class="app-icon app-icon-lg">
           <p class="app-meta"><span class="status status-dev">開発中</span></p>
         </div>
         <h1 id="app-title" class="app-title" data-edit-id="vorel-title">VoRel-ヴォレル-</h1>
@@ -72,7 +72,7 @@
         </div>
       </div>
       <figure class="app-hero-media" data-edit-id="vorel-hero-screen">
-        <img src="../../assets/media/vorel/screen-voice.webp?v=20261114-playglass" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" decoding="async" fetchpriority="high" class="phone">
+        <img src="../../assets/media/vorel/screen-voice.webp?v=20261116-storyflow" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" decoding="async" fetchpriority="high" class="phone">
       </figure>
     </div>
   </section>
@@ -80,7 +80,7 @@
   <nav class="toc" aria-label="このページの内容" data-edit-id="vorel-toc">
     <div class="wrap toc-in">
       <p class="toc-label" aria-hidden="true">このページ</p>
-      <ul class="toc-list"><li><a href="#scenes" data-edit-id="vorel-toc-scenes">用途</a></li><li><a href="#features" data-edit-id="vorel-toc-features">機能を詳しく</a></li><li><a href="#steps" data-edit-id="vorel-toc-steps">使い方</a></li><li><a href="#gallery" data-edit-id="vorel-toc-gallery">画面</a></li><li><a href="#video" data-edit-id="vorel-toc-video">キャラクター</a></li><li><a href="#faq" data-edit-id="vorel-toc-faq">よくある質問</a></li><li><a href="#dist" data-edit-id="vorel-toc-dist">配布</a></li></ul>
+      <ul class="toc-list"><li><a href="#scenes" data-edit-id="vorel-toc-scenes">利用場面</a></li><li><a href="#gallery" data-edit-id="vorel-toc-gallery">実画面</a></li><li><a href="#steps" data-edit-id="vorel-toc-steps">使い方</a></li><li><a href="#features" data-edit-id="vorel-toc-features">機能を詳しく</a></li><li><a href="#video" data-edit-id="vorel-toc-video">キャラクター</a></li><li><a href="#faq" data-edit-id="vorel-toc-faq">よくある質問</a></li><li><a href="#dist" data-edit-id="vorel-toc-dist">配布</a></li></ul>
     </div>
   </nav>
 
@@ -88,9 +88,81 @@
     <div class="wrap">
       <header class="section-head">
         <h2 id="scenes-title" class="section-title">こんな時に使うことを想定しています</h2>
+        <p class="section-lead">まずは使いたい場面から。気になる場面のリンクを押すと、対応する実画面と説明を確認できます。</p>
         <p class="section-lead">開発中のため、公開までに内容が変わる場合があります。</p>
       </header>
-      <ol class="scene-list"><li class="scene" data-edit-id="vorel-scene-1"><h3 class="scene-title">文字を打つより、話したほうが早いとき</h3><p class="scene-text">マイクを押してやりたいことを話し、文字になった内容を確かめてから、選んだAIへ渡す使い方を想定しています。</p></li><li class="scene" data-edit-id="vorel-scene-2"><h3 class="scene-title">言い間違いを直してから送りたいとき</h3><p class="scene-text">聞き取られた文章は、送る前に画面で確認して直せるようにしています。</p></li><li class="scene" data-edit-id="vorel-scene-3"><h3 class="scene-title">その日の気分で画面を変えたいとき</h3><p class="scene-text">水滴のキャラクターや水面・光など、音声画面の見た目を選び替えられるようにしています。</p></li></ol>
+      <ol class="scene-list"><li class="scene" data-edit-id="vorel-scene-1"><h3 class="scene-title">文字を打つより、話したほうが早いとき</h3><p class="scene-text">マイクを押してやりたいことを話し、文字になった内容を確かめてから、選んだAIへ渡す使い方を想定しています。</p><a class="scene-screen-link" data-guide-link href="#vorel-guide-screen-voice">声から始めるの画面を見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li class="scene" data-edit-id="vorel-scene-2"><h3 class="scene-title">言い間違いを直してから送りたいとき</h3><p class="scene-text">聞き取られた文章は、送る前に画面で確認して直せるようにしています。</p><a class="scene-screen-link" data-guide-link href="#vorel-guide-screen-confirm">送る前に確認の画面を見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li class="scene" data-edit-id="vorel-scene-3"><h3 class="scene-title">その日の気分で画面を変えたいとき</h3><p class="scene-text">水滴のキャラクターや水面・光など、音声画面の見た目を選び替えられるようにしています。</p><a class="scene-screen-link" data-guide-link href="#vorel-guide-screen-design">好みの音声画面の画面を見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li></ol>
+    </div>
+  </section>
+
+  <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 id="gallery-title" class="section-title">実画面で、できることを確認。</h2>
+        <p class="section-lead">開発中の画面です。公開までに内容やデザインが変わる場合があります。</p>
+      </header>
+      <div class="screen-guide" data-screen-guide data-edit-id="vorel-screen-guide">
+        <nav class="guide-nav" aria-label="詳しく見る画面を選ぶ"><a id="vorel-guide-screen-voice-tab" href="#vorel-guide-screen-voice" data-guide-tab>声から始める</a><a id="vorel-guide-screen-confirm-tab" href="#vorel-guide-screen-confirm" data-guide-tab>送る前に確認</a><a id="vorel-guide-screen-design-tab" href="#vorel-guide-screen-design" data-guide-tab>好みの音声画面</a></nav>
+        <div class="guide-stage">
+        <article class="guide-panel" id="vorel-guide-screen-voice" data-guide-panel data-guide-title="声から始める" data-edit-id="vorel-shot-screen-voice">
+          <figure class="guide-figure">
+            <img src="../../assets/media/vorel/screen-voice.webp?v=20261116-storyflow" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" loading="lazy" decoding="async" class="phone">
+            <figcaption>開発中の音声入力画面。水滴のキャラクターが表示されます。</figcaption>
+            <a class="shot-open" href="../../assets/media/vorel/screen-voice.webp?v=20261116-storyflow" target="_blank" rel="noopener noreferrer" data-edit-id="vorel-shot-screen-voice-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（開発中の音声入力画面。水滴のキャラクターが表示されます。、新しいタブで開きます）</span></a>
+          </figure>
+          <div class="guide-copy">
+            <p class="eyebrow">開発中の画面を詳しく</p>
+            <h3>声から始める</h3><p class="guide-description">マイクから話した内容を文字にして、使いたいAIへつなぐ音声ハブを開発しています。返答の文章表示と、端末内音声での読み上げも試作しています。</p>
+            <h4>想定している使い方</h4>
+            <ol class="guide-actions"><li>マイクから、やりたいことを話す流れです。</li><li>認識された文章を画面で確かめます。</li><li>利用するAIと、そのサービスの接続条件を確認します。</li></ol>
+            <aside class="guide-condition"><h4>知っておきたいこと</h4><p>開発中です。AIの利用権や接続設定は、各サービスで別途必要になる予定です。</p></aside>
+          </div>
+        </article>
+        <article class="guide-panel" id="vorel-guide-screen-confirm" data-guide-panel data-guide-title="送る前に確認" data-edit-id="vorel-shot-screen-confirm">
+          <figure class="guide-figure">
+            <img src="../../assets/media/vorel/screen-confirm.webp?v=20261116-storyflow" alt="開発中の画面。声で入力した文章を確認してから送ります。" width="640" height="1391" loading="lazy" decoding="async" class="phone">
+            <figcaption>開発中の画面。声で入力した文章を確認してから送ります。</figcaption>
+            <a class="shot-open" href="../../assets/media/vorel/screen-confirm.webp?v=20261116-storyflow" target="_blank" rel="noopener noreferrer" data-edit-id="vorel-shot-screen-confirm-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（開発中の画面。声で入力した文章を確認してから送ります。、新しいタブで開きます）</span></a>
+          </figure>
+          <div class="guide-copy">
+            <p class="eyebrow">開発中の画面を詳しく</p>
+            <h3>送る前に確認</h3><p class="guide-description">認識した文章を、そのまま送る前に確認・修正できる流れを作っています。話した内容と、送信する内容を分けて確かめるための画面です。</p>
+            <h4>想定している使い方</h4>
+            <ol class="guide-actions"><li>文字になった内容を確認します。</li><li>言い間違いや聞き取りの違いを直します。</li><li>内容と送信先を確かめてから送る流れを想定しています。</li></ol>
+            <aside class="guide-condition"><h4>知っておきたいこと</h4><p>開発中の画面です。公開までに接続方法や表示・操作が変わる場合があります。</p></aside>
+          </div>
+        </article>
+        <article class="guide-panel" id="vorel-guide-screen-design" data-guide-panel data-guide-title="好みの音声画面" data-edit-id="vorel-shot-screen-design">
+          <figure class="guide-figure">
+            <img src="../../assets/media/vorel/screen-design.webp?v=20261116-storyflow" alt="開発中の画面。音声画面の表示デザインを選びます。" width="640" height="1391" loading="lazy" decoding="async" class="phone">
+            <figcaption>開発中の画面。音声画面の表示デザインを選びます。</figcaption>
+            <a class="shot-open" href="../../assets/media/vorel/screen-design.webp?v=20261116-storyflow" target="_blank" rel="noopener noreferrer" data-edit-id="vorel-shot-screen-design-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（開発中の画面。音声画面の表示デザインを選びます。、新しいタブで開きます）</span></a>
+          </figure>
+          <div class="guide-copy">
+            <p class="eyebrow">開発中の画面を詳しく</p>
+            <h3>好みの音声画面</h3><p class="guide-description">水滴のキャラクター・水面・波紋・光・球体・アシスタントの6種類から、音声画面の見た目を選べるようにしています。</p>
+            <h4>想定している使い方</h4>
+            <ol class="guide-actions"><li>設定の「画面・UI」を開きます。</li><li>音声画面の表示を選びます。</li><li>話しかける画面を、自分の好みに合わせる使い方です。</li></ol>
+            <aside class="guide-condition"><h4>知っておきたいこと</h4><p>開発中の表示です。キャラクターや音声の自然さは、今後も調整していきます。</p></aside>
+          </div>
+        </article></div>
+        <div class="guide-controls" data-guide-controls hidden>
+          <button class="btn btn-ghost" type="button" data-guide-prev>前の画面</button>
+          <p class="guide-status" data-guide-status aria-live="polite" aria-atomic="true"></p>
+          <button class="btn btn-ghost" type="button" data-guide-next>次の画面</button>
+        </div>
+      </div>
+      <a class="btn btn-ghost flow-next" href="#steps">次は、使い方の流れを見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </section>
+  <section class="section steps" id="steps" aria-labelledby="steps-title">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 id="steps-title" class="section-title">想定している使い方</h2>
+      </header>
+      <ol class="step-list"><li class="step" data-edit-id="vorel-step-1"><p class="step-num" aria-hidden="true">1</p><div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>話しかける</h3><p>マイクを押して、やりたいことを話します。</p><a class="step-screen-link" data-guide-link href="#vorel-guide-screen-voice">この手順の画面を見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></li><li class="step" data-edit-id="vorel-step-2"><p class="step-num" aria-hidden="true">2</p><div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>文章で確かめる</h3><p>認識された文章を確認し、必要なら直します。</p><a class="step-screen-link" data-guide-link href="#vorel-guide-screen-confirm">この手順の画面を見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></li><li class="step" data-edit-id="vorel-step-3"><p class="step-num" aria-hidden="true">3</p><div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>画面を選ぶ</h3><p>水滴のキャラクターや水面など、音声画面の見た目を好みに合わせて選べるようにしています。</p><a class="step-screen-link" data-guide-link href="#vorel-guide-screen-design">この手順の画面を見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></li>
+      </ol>
+      <a class="btn btn-ghost flow-next" href="#features">機能と利用条件を詳しく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </section>
 
@@ -110,7 +182,7 @@
           <ul class="story-points"><li>マイクを押して話す</li><li>文字になった内容を確かめ、必要なら直す</li><li>返答の読み上げは、声の種類と速さを選べる形で試作中です</li></ul>
           <p class="story-note">使うAIは ChatGPT・Gemini・Claude・Grok を対象に開発しています。接続の方法や利用条件はサービスごとに異なり、各サービス側の利用権や設定が別に必要になる見込みです。</p>
         </div>
-        <div class="story-media story-media-2"><figure class="story-shot"><img src="../../assets/media/vorel/screen-voice.webp?v=20261114-playglass" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の音声入力画面。水滴のキャラクターが表示されます。</figcaption></figure><figure class="story-shot"><img src="../../assets/media/vorel/screen-confirm.webp?v=20261114-playglass" alt="開発中の画面。声で入力した文章を確認してから送ります。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。声で入力した文章を確認してから送ります。</figcaption></figure></div>
+        <div class="story-media story-media-2"><figure class="story-shot"><img src="../../assets/media/vorel/screen-voice.webp?v=20261116-storyflow" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の音声入力画面。水滴のキャラクターが表示されます。</figcaption></figure><figure class="story-shot"><img src="../../assets/media/vorel/screen-confirm.webp?v=20261116-storyflow" alt="開発中の画面。声で入力した文章を確認してから送ります。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。声で入力した文章を確認してから送ります。</figcaption></figure></div>
       </article>
       <article class="story story-rev" id="feature-design" aria-labelledby="story-design-title" data-edit-id="vorel-story-design">
         <div class="story-text">
@@ -121,7 +193,7 @@
           <ul class="story-points"><li>設定の「画面・UI」から音声画面の表示を選ぶ</li><li>ホーム画面のウィジェットも準備しています</li></ul>
           <p class="story-note">開発中の画面です。公開までに内容やデザインが変わる場合があります。</p>
         </div>
-        <div class="story-media story-media-1"><figure class="story-shot"><img src="../../assets/media/vorel/screen-design.webp?v=20261114-playglass" alt="開発中の画面。音声画面の表示デザインを選びます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。音声画面の表示デザインを選びます。</figcaption></figure></div>
+        <div class="story-media story-media-1"><figure class="story-shot"><img src="../../assets/media/vorel/screen-design.webp?v=20261116-storyflow" alt="開発中の画面。音声画面の表示デザインを選びます。" width="640" height="1391" loading="lazy" decoding="async" class="phone"><figcaption>開発中の画面。音声画面の表示デザインを選びます。</figcaption></figure></div>
       </article>
       </div>
       <div class="feature-all" data-edit-id="vorel-feature-all">
@@ -131,75 +203,6 @@
     </div>
   </section>
 
-  <section class="section steps" id="steps" aria-labelledby="steps-title">
-    <div class="wrap">
-      <header class="section-head">
-        <h2 id="steps-title" class="section-title">想定している使い方</h2>
-      </header>
-      <ol class="step-list"><li class="step" data-edit-id="vorel-step-1"><p class="step-num" aria-hidden="true">1</p><div class="step-text"><h3><span class="visually-hidden">ステップ1：</span>話しかける</h3><p>マイクを押して、やりたいことを話します。</p></div></li><li class="step" data-edit-id="vorel-step-2"><p class="step-num" aria-hidden="true">2</p><div class="step-text"><h3><span class="visually-hidden">ステップ2：</span>文章で確かめる</h3><p>認識された文章を確認し、必要なら直します。</p></div></li><li class="step" data-edit-id="vorel-step-3"><p class="step-num" aria-hidden="true">3</p><div class="step-text"><h3><span class="visually-hidden">ステップ3：</span>画面を選ぶ</h3><p>水滴のキャラクターや水面など、音声画面の見た目を好みに合わせて選べるようにしています。</p></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
-    <div class="wrap">
-      <header class="section-head">
-        <h2 id="gallery-title" class="section-title">画面から、もっと詳しく。</h2>
-        <p class="section-lead">開発中の画面です。公開までに内容やデザインが変わる場合があります。</p>
-      </header>
-      <div class="screen-guide" data-screen-guide data-edit-id="vorel-screen-guide">
-        <nav class="guide-nav" aria-label="詳しく見る画面を選ぶ"><a id="vorel-guide-screen-voice-tab" href="#vorel-guide-screen-voice" data-guide-tab>声から始める</a><a id="vorel-guide-screen-confirm-tab" href="#vorel-guide-screen-confirm" data-guide-tab>送る前に確認</a><a id="vorel-guide-screen-design-tab" href="#vorel-guide-screen-design" data-guide-tab>好みの音声画面</a></nav>
-        <div class="guide-stage">
-        <article class="guide-panel" id="vorel-guide-screen-voice" data-guide-panel data-guide-title="声から始める" data-edit-id="vorel-shot-screen-voice">
-          <figure class="guide-figure">
-            <img src="../../assets/media/vorel/screen-voice.webp?v=20261114-playglass" alt="開発中の音声入力画面。水滴のキャラクターが表示されます。" width="640" height="1391" loading="lazy" decoding="async" class="phone">
-            <figcaption>開発中の音声入力画面。水滴のキャラクターが表示されます。</figcaption>
-            <a class="shot-open" href="../../assets/media/vorel/screen-voice.webp?v=20261114-playglass" target="_blank" rel="noopener noreferrer" data-edit-id="vorel-shot-screen-voice-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（開発中の音声入力画面。水滴のキャラクターが表示されます。、新しいタブで開きます）</span></a>
-          </figure>
-          <div class="guide-copy">
-            <p class="eyebrow">開発中の画面を詳しく</p>
-            <h3>声から始める</h3><p class="guide-description">マイクから話した内容を文字にして、使いたいAIへつなぐ音声ハブを開発しています。返答の文章表示と、端末内音声での読み上げも試作しています。</p>
-            <h4>想定している使い方</h4>
-            <ol class="guide-actions"><li>マイクから、やりたいことを話す流れです。</li><li>認識された文章を画面で確かめます。</li><li>利用するAIと、そのサービスの接続条件を確認します。</li></ol>
-            <aside class="guide-condition"><h4>知っておきたいこと</h4><p>開発中です。AIの利用権や接続設定は、各サービスで別途必要になる予定です。</p></aside>
-          </div>
-        </article>
-        <article class="guide-panel" id="vorel-guide-screen-confirm" data-guide-panel data-guide-title="送る前に確認" data-edit-id="vorel-shot-screen-confirm">
-          <figure class="guide-figure">
-            <img src="../../assets/media/vorel/screen-confirm.webp?v=20261114-playglass" alt="開発中の画面。声で入力した文章を確認してから送ります。" width="640" height="1391" loading="lazy" decoding="async" class="phone">
-            <figcaption>開発中の画面。声で入力した文章を確認してから送ります。</figcaption>
-            <a class="shot-open" href="../../assets/media/vorel/screen-confirm.webp?v=20261114-playglass" target="_blank" rel="noopener noreferrer" data-edit-id="vorel-shot-screen-confirm-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（開発中の画面。声で入力した文章を確認してから送ります。、新しいタブで開きます）</span></a>
-          </figure>
-          <div class="guide-copy">
-            <p class="eyebrow">開発中の画面を詳しく</p>
-            <h3>送る前に確認</h3><p class="guide-description">認識した文章を、そのまま送る前に確認・修正できる流れを作っています。話した内容と、送信する内容を分けて確かめるための画面です。</p>
-            <h4>想定している使い方</h4>
-            <ol class="guide-actions"><li>文字になった内容を確認します。</li><li>言い間違いや聞き取りの違いを直します。</li><li>内容と送信先を確かめてから送る流れを想定しています。</li></ol>
-            <aside class="guide-condition"><h4>知っておきたいこと</h4><p>開発中の画面です。公開までに接続方法や表示・操作が変わる場合があります。</p></aside>
-          </div>
-        </article>
-        <article class="guide-panel" id="vorel-guide-screen-design" data-guide-panel data-guide-title="好みの音声画面" data-edit-id="vorel-shot-screen-design">
-          <figure class="guide-figure">
-            <img src="../../assets/media/vorel/screen-design.webp?v=20261114-playglass" alt="開発中の画面。音声画面の表示デザインを選びます。" width="640" height="1391" loading="lazy" decoding="async" class="phone">
-            <figcaption>開発中の画面。音声画面の表示デザインを選びます。</figcaption>
-            <a class="shot-open" href="../../assets/media/vorel/screen-design.webp?v=20261114-playglass" target="_blank" rel="noopener noreferrer" data-edit-id="vorel-shot-screen-design-open">画像を大きく見る<svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="visually-hidden">（開発中の画面。音声画面の表示デザインを選びます。、新しいタブで開きます）</span></a>
-          </figure>
-          <div class="guide-copy">
-            <p class="eyebrow">開発中の画面を詳しく</p>
-            <h3>好みの音声画面</h3><p class="guide-description">水滴のキャラクター・水面・波紋・光・球体・アシスタントの6種類から、音声画面の見た目を選べるようにしています。</p>
-            <h4>想定している使い方</h4>
-            <ol class="guide-actions"><li>設定の「画面・UI」を開きます。</li><li>音声画面の表示を選びます。</li><li>話しかける画面を、自分の好みに合わせる使い方です。</li></ol>
-            <aside class="guide-condition"><h4>知っておきたいこと</h4><p>開発中の表示です。キャラクターや音声の自然さは、今後も調整していきます。</p></aside>
-          </div>
-        </article></div>
-        <div class="guide-controls" data-guide-controls hidden>
-          <button class="btn btn-ghost" type="button" data-guide-prev>前の画面</button>
-          <p class="guide-status" data-guide-status aria-live="polite" aria-atomic="true"></p>
-          <button class="btn btn-ghost" type="button" data-guide-next>次の画面</button>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="section video" id="video" aria-labelledby="video-title">
     <div class="wrap mascot-in">
@@ -208,7 +211,7 @@
         <p class="section-lead">音声画面に登場する、水をモチーフにしたキャラクターです。紹介動画は公開に合わせて用意する予定です。</p>
       </header>
       <figure class="mascot" data-edit-id="vorel-mascot">
-        <img src="../../assets/media/vorel/mascot.webp?v=20261114-playglass" alt="VoRel の水滴のキャラクター。透明な水のしずくの形をしています。" width="1000" height="400" loading="lazy" decoding="async">
+        <img src="../../assets/media/vorel/mascot.webp?v=20261116-storyflow" alt="VoRel の水滴のキャラクター。透明な水のしずくの形をしています。" width="1000" height="400" loading="lazy" decoding="async">
       </figure>
     </div>
   </section>
@@ -248,7 +251,7 @@
   <section class="section others" aria-labelledby="others-title">
     <div class="wrap">
       <h2 id="others-title" class="section-title small">ほかのアプリ</h2>
-      <ul class="other-list"><li><a class="other" href="../../apps/monoa/index.html" style="--app:#1f5a43;--app-tint:#e6efe9"><img src="../../assets/media/monoa/icon.webp?v=20261114-playglass" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon"><span class="other-text"><span class="other-name">MonoA-話す家計簿-</span><span class="other-status">App Storeで公開中</span></span><svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="other" href="../../apps/bondly/index.html" style="--app:#2747a8;--app-tint:#e8ecf8"><img src="../../assets/media/bondly/icon.webp?v=20261114-playglass" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon"><span class="other-text"><span class="other-name">Bondly — ヒトメモリー</span><span class="other-status">App Storeで公開中</span></span><svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="other" href="../../apps/multicalendar/index.html" style="--app:#0d6b78;--app-tint:#e2f0f1"><img src="../../assets/media/multicalendar/icon.webp?v=20261114-playglass" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon"><span class="other-text"><span class="other-name">Multi Calendar</span><span class="other-status">最新版を審査中</span></span><svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li></ul>
+      <ul class="other-list"><li><a class="other" href="../../apps/monoa/index.html" style="--app:#1f5a43;--app-tint:#e6efe9"><img src="../../assets/media/monoa/icon.webp?v=20261116-storyflow" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon"><span class="other-text"><span class="other-name">MonoA-話す家計簿-</span><span class="other-status">App Storeで公開中</span></span><svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="other" href="../../apps/bondly/index.html" style="--app:#2747a8;--app-tint:#e8ecf8"><img src="../../assets/media/bondly/icon.webp?v=20261116-storyflow" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon"><span class="other-text"><span class="other-name">Bondly — ヒトメモリー</span><span class="other-status">App Storeで公開中</span></span><svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="other" href="../../apps/multicalendar/index.html" style="--app:#0d6b78;--app-tint:#e2f0f1"><img src="../../assets/media/multicalendar/icon.webp?v=20261116-storyflow" alt="" width="256" height="256" loading="lazy" decoding="async" class="app-icon"><span class="other-text"><span class="other-name">Multi Calendar</span><span class="other-status">最新版を審査中</span></span><svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li></ul>
       <p class="back"><a class="btn btn-ghost" href="../../index.html#apps"><svg class="i" aria-hidden="true" viewBox="0 0 16 16"><path d="M13 8H3M7 4 3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>アプリ一覧へ戻る</a></p>
     </div>
   </section>

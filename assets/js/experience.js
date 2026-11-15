@@ -93,11 +93,26 @@
     controls.hidden = false;
     select(selected, false);
     root.classList.add("is-enhanced");
+    function openLinkedPanel(index, focus) {
+      select(index, false);
+      if (focus) panels[index].focus({ preventScroll: true });
+      panels[index].scrollIntoView({ block: "start", behavior: reduced ? "auto" : "smooth" });
+    }
+    document.querySelectorAll("a[data-guide-link]").forEach(function (link) {
+      var index = panels.findIndex(function (panel) { return "#" + panel.id === link.hash; });
+      if (index < 0) return;
+      link.addEventListener("click", function (event) {
+        if (event.button || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        if (location.hash !== link.hash) history.pushState(null, "", link.hash);
+        openLinkedPanel(index, true);
+      });
+    });
     if (window.ResizeObserver) new ResizeObserver(indicator).observe(nav);
     else window.addEventListener("resize", indicator);
     window.addEventListener("hashchange", function () {
       var index = panels.findIndex(function (p) { return "#" + p.id === location.hash; });
-      if (index >= 0) select(index, false);
+      if (index >= 0) openLinkedPanel(index, false);
     });
   }
 
@@ -229,7 +244,7 @@
   }
 
   function setupFeedback() {
-    var selector = ".btn, .nav a, .app-switch a, .toc-list a, .guide-nav a, .app-filters button, .motion-toggle, .shot-open, .faq-item summary, .notice summary";
+    var selector = ".btn, .nav a, .app-switch a, .toc-list a, .guide-nav a, .app-filters button, .motion-toggle, .shot-open, .scene-screen-link, .step-screen-link, .faq-item summary, .notice summary";
     document.querySelectorAll(selector).forEach(function (control) {
       control.classList.add("touch-feedback");
       function release() {
