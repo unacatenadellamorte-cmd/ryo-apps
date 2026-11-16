@@ -221,7 +221,7 @@
   }
 
   function setupGlass() {
-    var panes = document.querySelectorAll(".app-card,.hero-shot,.story-media,.guide-stage,.step,.scene,.feature,.cta");
+    var panes = document.querySelectorAll(".app-card,.hero-shot,.story-media,.guide-stage,.step,.scene,.feature,.cta,.stage,.shelf");
     panes.forEach(function (pane) {
       pane.classList.add("glass-reactive");
       if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
@@ -244,7 +244,7 @@
   }
 
   function setupFeedback() {
-    var selector = ".btn, .nav a, .app-switch a, .toc-list a, .guide-nav a, .app-filters button, .motion-toggle, .shot-open, .scene-screen-link, .step-screen-link, .faq-item summary, .notice summary";
+    var selector = ".btn, .nav a, .app-switch a, .toc-list a, .guide-nav a, .app-filters button, .motion-toggle, .shot-open, .scene-screen-link, .step-screen-link, .faq-item summary, .notice summary, .shelf-tile, .shelf-link";
     document.querySelectorAll(selector).forEach(function (control) {
       control.classList.add("touch-feedback");
       function release() {
@@ -318,6 +318,90 @@
     else window.addEventListener("resize", indicator);
   }
 
+  /* アイコンを選ぶと、実画面と説明の舞台が入れ替わる。JSなしでは4つとも縦に並んだまま。 */
+  function setupShowcase() {
+    var root = document.querySelector("[data-showcase]");
+    if (!root) return;
+    var tiles = Array.from(root.querySelectorAll("[data-show]"));
+    var stages = Array.from(root.querySelectorAll("[data-stage]"));
+    if (!tiles.length || tiles.length !== stages.length) return;
+    var shelf = root.querySelector(".shelf"), selected = 0;
+    var marker = document.createElement("span");
+    marker.className = "shelf-selection";
+    marker.setAttribute("aria-hidden", "true");
+    shelf.appendChild(marker);
+    shelf.setAttribute("role", "tablist");
+    function position() {
+      var box = tiles[selected].getBoundingClientRect(), parent = shelf.getBoundingClientRect();
+      marker.style.width = box.width + "px";
+      marker.style.height = box.height + "px";
+      marker.style.transform = "translate(" + (box.left - parent.left + shelf.scrollLeft) + "px," + (box.top - parent.top + shelf.scrollTop) + "px)";
+    }
+    tiles.forEach(function (tile, i) {
+      tile.setAttribute("role", "tab"); tile.id = "show-tab-" + tile.dataset.show;
+      tile.setAttribute("aria-controls", stages[i].id);
+      tile.parentElement.setAttribute("role", "presentation");
+      stages[i].setAttribute("role", "tabpanel");
+      stages[i].setAttribute("aria-labelledby", tile.id);
+      stages[i].tabIndex = 0;
+    });
+    function select(slug, fromUser, focus) {
+      var index = tiles.findIndex(function (tile) { return tile.dataset.show === slug; });
+      if (index < 0) return;
+      selected = index;
+      tiles.forEach(function (tile, i) {
+        tile.setAttribute("aria-selected", String(i === selected));
+        tile.tabIndex = i === selected ? 0 : -1;
+      });
+      stages.forEach(function (stage, i) { stage.hidden = i !== selected; });
+      root.style.setProperty("--selected-app", tiles[selected].style.getPropertyValue("--app"));
+      position();
+      if (focus) tiles[selected].focus({ preventScroll: true });
+      if (fromUser) {
+        // 前の弾みを取り消し、連打でも選択した状態へ着地させる。
+        var icon = tiles[selected].querySelector(".shelf-icon");
+        if (icon) {
+          icon.getAnimations().forEach(function (animation) { animation.cancel(); });
+          motion(icon, [{ transform: "scale(.88) rotate(-8deg)" }, { transform: "scale(1.2) rotate(4deg)", offset: .55 }, { transform: "scale(1.08) rotate(-3deg)" }], { duration: 460 });
+        }
+      }
+    }
+    root.classList.add("is-live");
+    function fromHash() {
+      var slug = location.hash.replace("#show-", "");
+      select(slug, false, false);
+    }
+    select(stages[0].dataset.stage, false, false);
+    fromHash();
+    tiles.forEach(function (tile, index) {
+      tile.addEventListener("click", function (event) {
+        event.preventDefault(); select(tile.dataset.show, true, false);
+        history.replaceState(null, "", tile.hash);
+      });
+      tile.addEventListener("keydown", function (event) {
+        var next = index;
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") next = (index + 1) % tiles.length;
+        else if (event.key === "ArrowLeft" || event.key === "ArrowUp") next = (index + tiles.length - 1) % tiles.length;
+        else if (event.key === "Home") next = 0;
+        else if (event.key === "End") next = tiles.length - 1;
+        else if (event.key === " ") { event.preventDefault(); tile.click(); return; }
+        else return;
+        event.preventDefault(); select(tiles[next].dataset.show, true, true);
+        history.replaceState(null, "", tiles[next].hash);
+      });
+    });
+    document.querySelectorAll("[data-show-link]").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault(); select(link.dataset.showLink, true, true);
+        history.replaceState(null, "", "#show-" + link.dataset.showLink);
+        root.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+      });
+    });
+    window.addEventListener("hashchange", fromHash);
+    window.addEventListener("resize", position);
+    if (window.ResizeObserver) new ResizeObserver(position).observe(shelf);
+  }
+
   function setupReading() {
     var header = document.querySelector(".site-header");
     var bar = document.querySelector("[data-reading-progress]");
@@ -351,7 +435,7 @@
     });
     if (media.addEventListener) media.addEventListener("change", updateMotion);
     document.querySelectorAll("[data-screen-guide]").forEach(setupGuide);
-    setupViewer(); setupFaq(); setupGlass(); setupReading(); setupAppPicker(); setupFeedback();
+    setupViewer(); setupFaq(); setupGlass(); setupReading(); setupAppPicker(); setupShowcase(); setupFeedback();
     if (!location.hash) {
       var title = document.querySelector(".hero-text,.app-hero-text");
       if (title) motion(title, [{ opacity: .3, transform: "translateY(10px)" }, { opacity: 1, transform: "translateY(0)" }], { duration: 550 });
