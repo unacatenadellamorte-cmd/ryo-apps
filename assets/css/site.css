@@ -1005,3 +1005,46 @@ body { isolation: isolate; background: #dfeafa; }
 @media (prefers-reduced-motion: reduce) { .shelf-selection { transition: none; } .app-card:hover .card-icon { transform: none; } }
 .motion-reduced .shelf-selection { transition: none; }
 @media (prefers-contrast: more) { .shelf-selection { border: 2px solid #173751; background: #fff; } }
+
+/* UIスキルでの磨き込み：既存のガラスとアイコンを残し、文字と操作の主従を明瞭にする。 */
+.page-home .hero { padding-block: clamp(40px, 6vw, 88px) 0; }
+.page-home .hero-text {
+  border-color: rgba(220, 239, 255, .22);
+  box-shadow: inset 0 1px 0 rgba(242, 250, 255, .24), 0 22px 48px -34px rgba(0, 0, 0, .48);
+}
+.hero-title { letter-spacing: -.025em; }
+.page-home .hero-cta {
+  min-height: 52px;
+  padding-inline: 28px;
+  color: #142b41;
+  background: #f4faff;
+  border-color: #fff;
+  box-shadow: 0 8px 22px -12px rgba(0, 0, 0, .5);
+}
+.page-home .hero-cta:hover { color: #142b41; background: #fff; }
+.hero-icon-name { min-height: 2.6em; display: flex; align-items: center; justify-content: center; }
+.shelf-name { min-height: 2.6em; display: flex; align-items: center; justify-content: center; }
+.app-card-body .app-lead, .stage-lead { text-wrap: pretty; }
+.page-home .hero-cta:focus-visible { outline-color: #a9dfff; outline-offset: 5px; }
+@media (min-width: 1040px) {
+  .page-home .hero-in { grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; padding-bottom: 72px; }
+  .page-home .hero-text { width: 100%; text-align: left; padding: 40px 28px; }
+  .page-home .hero-title { font-size: clamp(2.4rem, 3.8vw, 3.7rem); }
+  .page-home .hero-lead { font-size: 1rem; line-height: 2; }
+  .page-home .hero-shots { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; gap: 20px; max-width: 400px; }
+  .page-home .hero-shot { padding: 14px; border-radius: 26px; }
+  .page-home .hero-shot:nth-child(even) { transform: translateY(24px); }
+}
+@media (max-width: 600px) {
+  .page-home .hero-in { gap: 28px; }
+  .page-home .hero-text { padding: 28px 14px; border-radius: 26px; }
+  .page-home .hero-title { font-size: clamp(1.65rem, 7.5vw, 2rem); }
+  .page-home .hero-lead { font-size: .875rem; margin-top: 20px; }
+  .page-home .hero-shot:nth-child(even) { transform: none; }
+  .page-home .hero-shots { align-items: stretch; padding-bottom: 32px; }
+  .hero-icon-name { font-size: .75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-home .hero-shot:nth-child(even) { transform: none; }
+}
+.motion-reduced .page-home .hero-shot:nth-child(even) { transform: none; }
